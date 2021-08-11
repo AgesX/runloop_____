@@ -1353,6 +1353,22 @@ static CFRunLoopRef __CFRunLoopCreate(pthread_t t) {
 static CFMutableDictionaryRef __CFRunLoops = NULL;
 static CFLock_t loopsLock = CFLockInit;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // should only be called by Foundation
 // t==0 is a synonym for "main thread" that always works
 CF_EXPORT CFRunLoopRef _CFRunLoopGet0(pthread_t t) {
@@ -1363,6 +1379,10 @@ CF_EXPORT CFRunLoopRef _CFRunLoopGet0(pthread_t t) {
     if (!__CFRunLoops) {
         __CFUnlock(&loopsLock);
         CFMutableDictionaryRef dict = CFDictionaryCreateMutable(kCFAllocatorSystemDefault, 0, NULL, &kCFTypeDictionaryValueCallBacks);
+        
+        // 首先, 要创造，主的 run loop
+        
+        
         CFRunLoopRef mainLoop = __CFRunLoopCreate(pthread_main_thread_np());
         CFDictionarySetValue(dict, pthreadPointer(pthread_main_thread_np()), mainLoop);
         if (!OSAtomicCompareAndSwapPtrBarrier(NULL, dict, (void * volatile *)&__CFRunLoops)) {
@@ -1393,6 +1413,20 @@ CF_EXPORT CFRunLoopRef _CFRunLoopGet0(pthread_t t) {
     }
     return loop;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // should only be called by Foundation
 CFRunLoopRef _CFRunLoopGet0b(pthread_t t) {
@@ -1479,12 +1513,83 @@ void _CFRunLoopSetCurrent(CFRunLoopRef rl) {
 }
 #endif
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 CFRunLoopRef CFRunLoopGetMain(void) {
     CHECK_FOR_FORK();
     static CFRunLoopRef __main = NULL; // no retain needed
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //  pthread_main_thread_np(),                       这个是主线程
+    
+    
+    
+    //  传入，当前的主线程
+    
+    
+    
     if (!__main) __main = _CFRunLoopGet0(pthread_main_thread_np()); // no CAS needed
     return __main;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 CFRunLoopRef CFRunLoopGetCurrent(void) {
     CHECK_FOR_FORK();
