@@ -46,11 +46,26 @@
 
 - (void)deng_three_sourceDemo{
     
+    //  #4    0x0000000108d888f8 in __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ ()
 
 
     dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"hello word");
     });
+    
+
+}
+
+
+
+
+
+
+- (void)deng_four_sourceDemo{
+    
+    //  #17    0x0000000108c34c74 in __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ ()
+
+    
     
     void (^block)(void) = ^{
         NSLog(@"123");
@@ -60,8 +75,6 @@
 }
 
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -69,7 +82,10 @@
     
     
     
-    [self deng_two_sourceDemo];
+  //  [self deng_two_sourceDemo];
+    
+ //   [self deng_three_sourceDemo];
+    [self deng_four_sourceDemo];
 }
 
 
