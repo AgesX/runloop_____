@@ -1384,6 +1384,11 @@ CF_EXPORT CFRunLoopRef _CFRunLoopGet0(pthread_t t) {
         
         
         CFRunLoopRef mainLoop = __CFRunLoopCreate(pthread_main_thread_np());
+        
+        
+        //    达成了 KV , key value 的形式
+        //    dict [  pthreadPointer(pthread_main_thread_np())  ] = mainLoop
+        
         CFDictionarySetValue(dict, pthreadPointer(pthread_main_thread_np()), mainLoop);
         if (!OSAtomicCompareAndSwapPtrBarrier(NULL, dict, (void * volatile *)&__CFRunLoops)) {
             CFRelease(dict);
