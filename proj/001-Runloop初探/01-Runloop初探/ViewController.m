@@ -29,30 +29,25 @@
 }
 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+
+- (void)deng_two_sourceDemo{
     
-    [self deng_one_sourceDemo];
+    // 他的原理，同 timer
     
+    // 底层的通讯，都是基于 run loop
+    [self performSelector:@selector(fire) withObject:nil afterDelay:1.0];
     
-    
-   // [self sourceDemo];
+
 }
 
 
 
 
 
-
-
-#pragma mark -
-
-- (void)sourceDemo{
+- (void)deng_three_sourceDemo{
     
 
-    [self performSelector:@selector(fire) withObject:nil afterDelay:1.0];
-    
-    // __CFRUNLOOP_IS_CALLING_OUT_TO_A_TIMER_CALLBACK_FUNCTION__
+
     dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"hello word");
     });
@@ -64,10 +59,42 @@
     block();
 }
 
+
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    //  [self deng_one_sourceDemo];
+    
+    
+    
+    [self deng_two_sourceDemo];
+}
+
+
+
+
+
+
+
+#pragma mark -
+
+
+
+
+
+
+
 // __CFRUNLOOP_IS_CALLING_OUT_TO_A_TIMER_CALLBACK_FUNCTION__
 - (void)fire{
-    NSLog(@"performSeletor");
+    NSLog(@"hahaha:    performSeletor");
 }
+
+
+
+
+
 
 #pragma mark - 触摸事件
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
