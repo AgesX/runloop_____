@@ -123,10 +123,34 @@
 
 //  就控制住了， run loop
 
-//  NSTimer 是基于  run loop 的 （ run loop 没有了意思，timer 也就 gg 了    ）
+//  NSTimer 是基于  run loop 的 （ run loop 没有了意义，timer 也就 gg 了    ）
 
 
 
 
 
 @end
+
+
+
+
+
+
+//   变量，    线程，    run loop,  timer
+
+
+
+
+
+
+
+
+
+
+//       子线程的， run loop, 默认不开启
+
+
+//       NSTimer 的运行，是依赖于 run loop 的
+
+
+
