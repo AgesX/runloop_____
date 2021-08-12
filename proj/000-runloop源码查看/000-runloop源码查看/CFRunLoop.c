@@ -1396,6 +1396,13 @@ CF_EXPORT CFRunLoopRef _CFRunLoopGet0(pthread_t t) {
         CFRelease(mainLoop);
         __CFLock(&loopsLock);
     }
+    
+    
+    
+    
+    //  线程和 run loop, 一一对应
+    
+    
     CFRunLoopRef loop = (CFRunLoopRef)CFDictionaryGetValue(__CFRunLoops, pthreadPointer(t));
     __CFUnlock(&loopsLock);
     if (!loop) {
