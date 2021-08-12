@@ -1383,6 +1383,16 @@ CF_EXPORT CFRunLoopRef _CFRunLoopGet0(pthread_t t) {
         // 首先, 要创造，主的 run loop
         
         
+        
+        
+        
+        //  拿线程，去创建 run loop,
+        
+        //  run loop , 是基于线程的
+        
+        
+        
+        
         CFRunLoopRef mainLoop = __CFRunLoopCreate(pthread_main_thread_np());
         
         

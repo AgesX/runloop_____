@@ -119,6 +119,12 @@
     self.isStopping = YES;
 }
 
+//  通过控制属性，来控制线程
+
+//  就控制住了， run loop
+
+//  NSTimer 是基于  run loop 的 （ run loop 没有了意思，timer 也就 gg 了    ）
+
 
 
 
