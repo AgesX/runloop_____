@@ -27,14 +27,24 @@
         // thread.name = nil 因为这个变量只是捕捉
         // LGThread *thread = nil
         // thread = 初始化 捕捉一个nil进来
-        NSLog(@"哈哈哈 :   %@---%@",[NSThread currentThread],[[NSThread currentThread] name]);
+        NSLog(@"哈哈哈 :   %@---       %@",[NSThread currentThread],[[NSThread currentThread] name]);
         [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
             NSLog(@"hello word, 走你， 子线程 timer");            // 退出线程--结果runloop也停止了
             if (self.isStopping) {
                 [NSThread exit];
             }
         }];
-      //  [[NSRunLoop currentRunLoop] run]; //  关键代码
+        [[NSRunLoop currentRunLoop] run]; //  关键代码
+        
+        //
+        
+        //
+        
+        //
+        
+        
+        // 子线程，没有创建 run loop
+        // 默认，不开启
     }];
     
     thread.name = @"lgcode.com";
