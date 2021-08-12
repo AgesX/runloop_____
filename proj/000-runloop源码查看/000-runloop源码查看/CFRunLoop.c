@@ -634,10 +634,32 @@ typedef struct _per_run_data {
     uint32_t ignoreWakeUps;
 } _per_run_data;
 
+
+
+
+
+
+
+
+
+// Run Loop 结构体
+
+
+
+
 struct __CFRunLoop {
     CFRuntimeBase _base;
     pthread_mutex_t _lock;            /* locked for accessing mode list */
+    
+    
+    
+    
+    //     唤醒 port
+    //     激活 port
     __CFPort _wakeUpPort;            // used for CFRunLoopWakeUp
+    
+    
+    
     Boolean _unused;
     volatile _per_run_data *_perRunData;              // reset for runs of the run loop
     pthread_t _pthread;
@@ -646,12 +668,27 @@ struct __CFRunLoop {
     CFMutableSetRef _commonModeItems;
     CFRunLoopModeRef _currentMode;
     CFMutableSetRef _modes;
+    
+    
     struct _block_item *_blocks_head;
     struct _block_item *_blocks_tail;
+    
+    
+    
     CFAbsoluteTime _runTime;
     CFAbsoluteTime _sleepTime;
     CFTypeRef _counterpart;
 };
+
+
+
+
+
+
+
+
+
+
 
 /* Bit 0 of the base reserved bits is used for stopped state */
 /* Bit 1 of the base reserved bits is used for sleeping state */
