@@ -663,11 +663,22 @@ struct __CFRunLoop {
     Boolean _unused;
     volatile _per_run_data *_perRunData;              // reset for runs of the run loop
     pthread_t _pthread;
-    uint32_t _winthread;
+    
+    
+    
+    
+    uint32_t _winthread;                        //      对 windows 平台的，支持
+    
+    
+    
+    
     CFMutableSetRef _commonModes;
     CFMutableSetRef _commonModeItems;
     CFRunLoopModeRef _currentMode;
     CFMutableSetRef _modes;
+    
+    
+    //  下面是，更加的底层
     
     
     struct _block_item *_blocks_head;
@@ -679,6 +690,8 @@ struct __CFRunLoop {
     CFAbsoluteTime _sleepTime;
     CFTypeRef _counterpart;
 };
+
+
 
 
 
