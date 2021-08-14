@@ -13,6 +13,7 @@
 		269F689726C7814D0057553C /* deleteDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269F689626C7814D0057553C /* deleteDuplicates.swift */; };
 		269F689926C786C40057553C /* MinStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269F689826C786C40057553C /* MinStack.swift */; };
 		269F689E26C7ACCF0057553C /* searchInsert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269F689D26C7ACCF0057553C /* searchInsert.swift */; };
+		269F68A026C7BB400057553C /* sortedArrayToBST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269F689F26C7BB400057553C /* sortedArrayToBST.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,7 @@
 		269F689626C7814D0057553C /* deleteDuplicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deleteDuplicates.swift; sourceTree = "<group>"; };
 		269F689826C786C40057553C /* MinStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinStack.swift; sourceTree = "<group>"; };
 		269F689D26C7ACCF0057553C /* searchInsert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchInsert.swift; sourceTree = "<group>"; };
+		269F689F26C7BB400057553C /* sortedArrayToBST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sortedArrayToBST.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				269F689626C7814D0057553C /* deleteDuplicates.swift */,
 				269F689826C786C40057553C /* MinStack.swift */,
 				269F689D26C7ACCF0057553C /* searchInsert.swift */,
+				269F689F26C7BB400057553C /* sortedArrayToBST.swift */,
 			);
 			path = leetcode;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 				269F689926C786C40057553C /* MinStack.swift in Sources */,
 				269F689326C770380057553C /* isPrefixString.swift in Sources */,
 				268ABE6B26C52F3300E25548 /* main.swift in Sources */,
+				269F68A026C7BB400057553C /* sortedArrayToBST.swift in Sources */,
 				269F689726C7814D0057553C /* deleteDuplicates.swift in Sources */,
 				269F689526C77D650057553C /* mergeTwoLists.swift in Sources */,
 			);
