@@ -19,6 +19,26 @@ public class ListNode {
     public init() { self.val = 0; self.next = nil; }
     public init(_ val: Int) { self.val = val; self.next = nil; }
     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+    
+    
+    
+    init(array arr: [Int]) {
+        
+        let cnt = arr.count
+        var i = 0
+        let dummy = ListNode()
+        var cur: ListNode? = dummy
+        while i < cnt {
+            cur?.next = ListNode(arr[i])
+            cur = cur?.next
+            i += 1
+        }
+        val = dummy.next?.val ?? -1
+        next = dummy.next?.next
+        
+    }
+    
+    
 }
 
 
@@ -62,11 +82,11 @@ class Solution {
                 cur = cur?.next
             }
         }
-       // print(dummy.next?.desp ?? "ha ")
-        if lhs?.next != nil{
+    //    print(dummy.next?.desp ?? "ha ")
+        if lhs != nil{
             cur?.next = lhs
         }
-        else if rhs?.next != nil{
+        else if rhs != nil{
             cur?.next = rhs
         }
         return dummy.next
@@ -90,9 +110,23 @@ var lhs = one
 lhs.next = two
 
 
+//
+
+// lhs = ListNode(array: [1, 2, 4])
+
+//
+
+
 var rhs = three
 three.next = four
 four.next = five
+
+
+//
+
+// rhs = ListNode(array: [1, 3, 4])
+
+//
 
 
 print("lhs:  ", lhs.desp)
@@ -106,3 +140,7 @@ let result = Solution().mergeTwoLists(lhs, rhs)
 
 
 print(result?.desp ?? "哈哈哈")
+
+
+
+// 21. Merge Two Sorted Lists
