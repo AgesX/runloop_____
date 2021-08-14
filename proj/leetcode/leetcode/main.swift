@@ -49,10 +49,8 @@ class Solution {
         var lhs = l1
         var rhs = l2
         var cur: ListNode? = dummy
-        while lhs?.next != nil , rhs?.next != nil {
-            
+        while lhs != nil , rhs != nil {
             if let left = lhs, let right = rhs{
-                
                 if left.val > right.val{
                     cur?.next = right
                     rhs = right.next
@@ -61,10 +59,16 @@ class Solution {
                     cur?.next = left
                     lhs = left.next
                 }
+                cur = cur?.next
             }
-            cur = cur?.next
         }
-        
+       // print(dummy.next?.desp ?? "ha ")
+        if lhs?.next != nil{
+            cur?.next = lhs
+        }
+        else if rhs?.next != nil{
+            cur?.next = rhs
+        }
         return dummy.next
     }
 }
@@ -78,7 +82,7 @@ let two = ListNode(8)
 
 let three = ListNode(1)
 
-let four = ListNode(8)
+let four = ListNode(9)
 
 let five = ListNode(99)
 
