@@ -21,17 +21,23 @@ class Solution {
         while lhs < rhs {
             
             let mid = (lhs + rhs) / 2   //  1   //  0
+            // 2
             let val = nums[mid]         // 3    //  1
+            // 7
             if val == target{
                 return mid
             }
             else if val > target{
                 rhs = mid
+                // 2
             }
             else{
                 // <
-                lhs = mid       // 1
+                lhs = mid + 1     // 1
+                // 这个要记住
+                
             }
+            
             
         }
         
@@ -50,6 +56,9 @@ var nums = [1, 3, 7]
 var tar = 3
 
 // tar = 0
+
+
+// tar = 5
 
 let tmp = Solution().searchInsert(nums, tar)
 
