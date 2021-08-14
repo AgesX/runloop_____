@@ -4,31 +4,83 @@ import Foundation
 
 
 
-class Solution {
+
+class MinStack {
+
     
+    var container = [Int]()
     
-    func deleteDuplicates(_ head: ListNode?) -> ListNode? {
- 
-        var cur = head
+    var alongContainer = [Int]()
+    
+    /** initialize your data structure here. */
+    init() {
         
-        while let current = cur{
-            
-            while let next = cur?.next, next.val == current.val{
-                cur?.next = cur?.next?.next
+    }
+    
+    func push(_ val: Int) {
+        container.append(val)
+        if let last = alongContainer.last{
+            if last >= val{
+                alongContainer.append(val)
             }
-            cur = cur?.next
         }
-        
-        return head
+        else{
+            alongContainer.append(val)
+        }
+    }
+    
+    func pop() {
+        guard container.isEmpty == false else {
+            return
+        }
+        let val = container.removeLast()
+        if let last = alongContainer.last, last == val{
+            alongContainer.removeLast()
+        }
+    }
+    
+    func top() -> Int {
+        if let top = container.last{
+            return top
+        }
+        else{
+            return -1
+        }
+    }
+    
+    func getMin() -> Int {
+        if let top = alongContainer.last{
+            return top
+        }
+        else{
+            return 666
+        }
     }
 }
 
 
 
 
-let one = ListNode(array: [1,1,2,3,3])
+let minS = MinStack()
 
-let result = Solution().deleteDuplicates(one)
+minS.push(-2)
+minS.push(0)
+minS.push(-3)
 
 
-print(result?.desp ?? "X x _")
+var tmp = minS.getMin()
+
+print(1, tmp)
+
+minS.pop()
+
+tmp = minS.top()
+
+
+print(2, tmp)
+
+
+tmp = minS.getMin()
+
+
+print(3, tmp)
