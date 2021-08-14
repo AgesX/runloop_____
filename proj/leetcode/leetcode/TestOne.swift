@@ -9,7 +9,7 @@ import Foundation
 
 
 
-class Solution {
+class Solution_A {
     func isPrefixString(_ s: String, _ words: [String]) -> Bool {
         let sLen = s.count
         let wordLen = words.count
@@ -65,7 +65,7 @@ class Solution {
         str = "ccccccccc"
         words = ["c","cc"]
 
-        let result = Solution().isPrefixString(str, words)
+        let result = Solution_A().isPrefixString(str, words)
 
 
         print(result)
