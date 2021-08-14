@@ -25,22 +25,30 @@ class Solution_one {
         
         while lhs < rhs {
             
-            let mid = (lhs + rhs) / 2   //  1   //  0
-            // 2
-            let val = nums[mid]         // 3    //  1
-            // 7
+            let mid = (lhs + rhs) / 2   //  1  // 0
+            // 2     (tar 5)
+            let val = nums[mid]         // 3  // 1
+            // 7     (tar 5)
             if val == target{
                 return mid
             }
             else if val > target{
                 rhs = mid
-                // 2
+                // 1
+                // 0
+                
+                
+                
+                // 2     (tar 5)
             }
             else{
                 // <
-                lhs = mid + 1     // 1
+                lhs = mid + 1
                 // 这个要记住
                 
+                
+                
+                //  2 (tar 5)
             }
             
             
