@@ -15,6 +15,7 @@
 		26E0AE3826C946C000E697E5 /* mergeTwoLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0AE3226C946C000E697E5 /* mergeTwoLists.swift */; };
 		26E0AE3926C946C000E697E5 /* deleteDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0AE3326C946C000E697E5 /* deleteDuplicates.swift */; };
 		26E0AE3E26C9477F00E697E5 /* invertTree_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0AE3D26C9477F00E697E5 /* invertTree_.swift */; };
+		26E0AE4026C94B1C00E697E5 /* maxProfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0AE3F26C94B1C00E697E5 /* maxProfit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		26E0AE3226C946C000E697E5 /* mergeTwoLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mergeTwoLists.swift; sourceTree = "<group>"; };
 		26E0AE3326C946C000E697E5 /* deleteDuplicates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = deleteDuplicates.swift; sourceTree = "<group>"; };
 		26E0AE3D26C9477F00E697E5 /* invertTree_.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = invertTree_.swift; sourceTree = "<group>"; };
+		26E0AE3F26C94B1C00E697E5 /* maxProfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maxProfit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		26E0AE2D26C946C000E697E5 /* Greedy */ = {
 			isa = PBXGroup;
 			children = (
+				26E0AE3F26C94B1C00E697E5 /* maxProfit.swift */,
 			);
 			path = Greedy;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				26E0AE3526C946C000E697E5 /* isPrefixString.swift in Sources */,
 				26E0AE3726C946C000E697E5 /* searchInsert.swift in Sources */,
 				26E0AE3426C946C000E697E5 /* MinStack.swift in Sources */,
+				26E0AE4026C94B1C00E697E5 /* maxProfit.swift in Sources */,
 				26E0AE3826C946C000E697E5 /* mergeTwoLists.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
