@@ -28,8 +28,7 @@ class Solution {
         var i = 0
         var j = 0
         
-        while i < height {
-            while j < width {
+        
                 let key = "\(i)_\(j)"
                 if grid[i][j] == 1, visited.contains(key) == false{
                     
@@ -37,12 +36,7 @@ class Solution {
                     
                 }
                 
-                
-                j += 1
-            }
-            
-            i += 1
-        }
+   
         
         
         
