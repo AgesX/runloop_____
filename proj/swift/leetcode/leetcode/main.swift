@@ -2,7 +2,12 @@
 import Foundation
 
 
-
+enum Direction{
+    case up
+    case down
+    case lhs
+    case rhs
+}
 
 
 class Solution {
@@ -29,6 +34,7 @@ class Solution {
         
         var queue = [(Int, Int)]()
         Outer: while i < height {
+            j = 0
             while j < width {
                 if grid[i][j] == 1{
                     let key = "\(i)_\(j)"
@@ -47,44 +53,50 @@ class Solution {
             let ii = pop.0
             let jj = pop.1
             
-            if ii >= 1, ii < height{
+            if ii >= 1{
                 let up = grid[ii - 1][jj]
                 let key = "\(ii - 1)_\(jj)"
                 if visited.contains(key) == false, up == 1{
                     visited.insert(key)
-                    result += 2
+                    result += getEgde(grid, ii: ii, jj: jj, orient: .up)
                     
                     // result += 4 - 2
                     // 一个 dot, 四条边
                     // 减去两个 dot 的共有边， 1 + 1
+                    
+                    //
+                    
+                    //
+                    
+                    // 还有一种情况，共有边的转移
                     queue.append((ii - 1, jj))
                 }
             }
-            if ii >= 0, ii < height - 1{
+            if ii < height - 1{
                 let down = grid[ii + 1][jj]
                 let key = "\(ii + 1)_\(jj)"
                 if visited.contains(key) == false, down == 1{
                     visited.insert(key)
-                    result += 2
+                    result += getEgde(grid, ii: ii, jj: jj, orient: .down)
                     queue.append((ii + 1, jj))
                 }
             }
-            if jj >= 1, jj < width{
+            if jj >= 1{
                 let lhs = grid[ii][jj - 1]
                 let key = "\(ii)_\(jj - 1)"
                 if visited.contains(key) == false, lhs == 1{
                     visited.insert(key)
-                    result += 2
+                    result += getEgde(grid, ii: ii, jj: jj, orient: .lhs)
                     queue.append((ii, jj - 1))
                 }
             }
             
-            if jj >= 1, jj < width - 1{
+            if jj < width - 1{
                 let rhs = grid[ii][jj + 1]
                 let key = "\(ii)_\(jj + 1)"
                 if visited.contains(key) == false, rhs == 1{
                     visited.insert(key)
-                    result += 2
+                    result += getEgde(grid, ii: ii, jj: jj, orient: .rhs)
                     queue.append((ii, jj + 1))
                 }
             }
@@ -92,6 +104,60 @@ class Solution {
         }
      //   print(visited)
         
+        return result
+    }
+    
+    
+    
+    
+    
+    func getEgde(_ grid: [[Int]], ii: Int, jj: Int, orient direction: Direction) -> Int {
+        
+        
+        let height = grid.count
+        let width = grid[0].count
+        var source: [Direction] = [.up, .down, .lhs, .rhs]
+        
+        source.removeAll { orient in
+            orient == direction
+        }
+        
+        var result = 2
+        
+        while source.isEmpty == false {
+            let pop = source.removeFirst()
+            switch pop {
+            case .up:
+                if ii >= 1{
+                    let key = "\(ii - 1)_\(jj)"
+                    if visited.contains(key){
+                        result -= 2
+                    }
+                }
+            case .down:
+                if ii < height - 1{
+                    let key = "\(ii + 1)_\(jj)"
+                    if visited.contains(key){
+                        result -= 2
+                    }
+                }
+            case .lhs:
+                if jj >= 1{
+                    let key = "\(ii)_\(jj - 1)"
+                    if visited.contains(key){
+                        result -= 2
+                    }
+                }
+            case .rhs:
+                if jj < width - 1{
+                    let key = "\(ii)_\(jj + 1)"
+                    if visited.contains(key){
+                        result -= 2
+                    }
+                }
+            }
+            
+        }
         return result
     }
 }
@@ -102,8 +168,14 @@ class Solution {
 
 
 
-let hahaha = [[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]
+var hahaha = [[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]
+hahaha = [[1]]
 
+hahaha = [[1, 1]]
+
+hahaha = [[0],[1]]
+
+hahaha = [[1,1],[1,1]]
 
 let result = Solution().islandPerimeter(hahaha)
 
