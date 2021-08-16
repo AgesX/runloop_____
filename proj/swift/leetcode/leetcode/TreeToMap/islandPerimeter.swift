@@ -9,9 +9,6 @@ import Foundation
 
 
 
-import Foundation
-
-
 enum Direction{
     case up
     case down
@@ -214,9 +211,6 @@ extension Solution_island{
 
 
 
-
-        print("\n\n\n")
-
     }
 }
 
@@ -314,12 +308,16 @@ class Solution_island_opt{
                     queue.append((newPt.i, newPt.j))
                 }
             }
+            
+            
+            // 这里面，主要是，获取格子
             if pt.i < height - 1{
                 let newPt = pt.down
                 let down = grid[newPt.i][newPt.j]
                 let k = newPt.key
                 if visited.contains(k) == false, down == 1{
                     visited.insert(k)
+                    // 下面的方法中，获取格子的有效边
                     result += getEgde(grid, pt: newPt, orient: .up)
                     queue.append((newPt.i, newPt.j))
                 }
