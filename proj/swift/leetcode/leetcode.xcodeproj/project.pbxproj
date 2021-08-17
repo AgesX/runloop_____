@@ -10,6 +10,7 @@
 		268ABE6B26C52F3300E25548 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268ABE6A26C52F3300E25548 /* main.swift */; };
 		269ECA6E26CA4A41001EF912 /* islandPerimeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269ECA6D26CA4A41001EF912 /* islandPerimeter.swift */; };
 		269ECA7126CA50CB001EF912 /* NumArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269ECA7026CA50CB001EF912 /* NumArray.swift */; };
+		269ECA7426CA7224001EF912 /* generateTrees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269ECA7326CA7224001EF912 /* generateTrees.swift */; };
 		26E0AE3426C946C000E697E5 /* MinStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0AE2A26C946C000E697E5 /* MinStack.swift */; };
 		26E0AE3526C946C000E697E5 /* isPrefixString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0AE2C26C946C000E697E5 /* isPrefixString.swift */; };
 		26E0AE3626C946C000E697E5 /* sortedArrayToBST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0AE2F26C946C000E697E5 /* sortedArrayToBST.swift */; };
@@ -37,6 +38,7 @@
 		268ABE6A26C52F3300E25548 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		269ECA6D26CA4A41001EF912 /* islandPerimeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = islandPerimeter.swift; sourceTree = "<group>"; };
 		269ECA7026CA50CB001EF912 /* NumArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumArray.swift; sourceTree = "<group>"; };
+		269ECA7326CA7224001EF912 /* generateTrees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generateTrees.swift; sourceTree = "<group>"; };
 		26E0AE2A26C946C000E697E5 /* MinStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinStack.swift; sourceTree = "<group>"; };
 		26E0AE2C26C946C000E697E5 /* isPrefixString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = isPrefixString.swift; sourceTree = "<group>"; };
 		26E0AE2F26C946C000E697E5 /* sortedArrayToBST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sortedArrayToBST.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				268ABE6A26C52F3300E25548 /* main.swift */,
 				26E0AE2926C946C000E697E5 /* Stack */,
 				26E0AE2B26C946C000E697E5 /* String */,
+				269ECA7226CA7215001EF912 /* Tree */,
 				269ECA6C26CA4A35001EF912 /* TreeToMap */,
 			);
 			path = leetcode;
@@ -104,6 +107,14 @@
 				269ECA7026CA50CB001EF912 /* NumArray.swift */,
 			);
 			path = Array;
+			sourceTree = "<group>";
+		};
+		269ECA7226CA7215001EF912 /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				269ECA7326CA7224001EF912 /* generateTrees.swift */,
+			);
+			path = Tree;
 			sourceTree = "<group>";
 		};
 		26E0AE2926C946C000E697E5 /* Stack */ = {
@@ -221,6 +232,7 @@
 				26E0AE3726C946C000E697E5 /* searchInsert.swift in Sources */,
 				269ECA6E26CA4A41001EF912 /* islandPerimeter.swift in Sources */,
 				26E0AE3426C946C000E697E5 /* MinStack.swift in Sources */,
+				269ECA7426CA7224001EF912 /* generateTrees.swift in Sources */,
 				26E0AE4026C94B1C00E697E5 /* maxProfit.swift in Sources */,
 				26E0AE3826C946C000E697E5 /* mergeTwoLists.swift in Sources */,
 				269ECA7126CA50CB001EF912 /* NumArray.swift in Sources */,
