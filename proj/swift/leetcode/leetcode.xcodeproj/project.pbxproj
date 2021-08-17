@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		268ABE6B26C52F3300E25548 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268ABE6A26C52F3300E25548 /* main.swift */; };
 		269C4F6626CB9D470069205E /* generateTrees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C4F6526CB9D470069205E /* generateTrees.swift */; };
+		269C4F6926CBA90C0069205E /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C4F6826CBA90C0069205E /* util.swift */; };
 		269ECA6E26CA4A41001EF912 /* islandPerimeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269ECA6D26CA4A41001EF912 /* islandPerimeter.swift */; };
 		269ECA7126CA50CB001EF912 /* NumArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269ECA7026CA50CB001EF912 /* NumArray.swift */; };
 		26E0AE3426C946C000E697E5 /* MinStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0AE2A26C946C000E697E5 /* MinStack.swift */; };
@@ -37,6 +38,7 @@
 		268ABE6726C52F3300E25548 /* leetcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leetcode; sourceTree = BUILT_PRODUCTS_DIR; };
 		268ABE6A26C52F3300E25548 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		269C4F6526CB9D470069205E /* generateTrees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generateTrees.swift; sourceTree = "<group>"; };
+		269C4F6826CBA90C0069205E /* util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = util.swift; sourceTree = "<group>"; };
 		269ECA6D26CA4A41001EF912 /* islandPerimeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = islandPerimeter.swift; sourceTree = "<group>"; };
 		269ECA7026CA50CB001EF912 /* NumArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumArray.swift; sourceTree = "<group>"; };
 		26E0AE2A26C946C000E697E5 /* MinStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinStack.swift; sourceTree = "<group>"; };
@@ -85,12 +87,21 @@
 				26E0AE2D26C946C000E697E5 /* Greedy */,
 				26E0AE3126C946C000E697E5 /* ListNode */,
 				268ABE6A26C52F3300E25548 /* main.swift */,
+				269C4F6726CBA8F10069205E /* meta */,
 				26E0AE2926C946C000E697E5 /* Stack */,
 				26E0AE2B26C946C000E697E5 /* String */,
 				269ECA7226CA7215001EF912 /* Tree */,
 				269ECA6C26CA4A35001EF912 /* TreeToMap */,
 			);
 			path = leetcode;
+			sourceTree = "<group>";
+		};
+		269C4F6726CBA8F10069205E /* meta */ = {
+			isa = PBXGroup;
+			children = (
+				269C4F6826CBA90C0069205E /* util.swift */,
+			);
+			path = meta;
 			sourceTree = "<group>";
 		};
 		269ECA6C26CA4A35001EF912 /* TreeToMap */ = {
@@ -228,6 +239,7 @@
 				26E0AE3626C946C000E697E5 /* sortedArrayToBST.swift in Sources */,
 				26E0AE3926C946C000E697E5 /* deleteDuplicates.swift in Sources */,
 				26E0AE3E26C9477F00E697E5 /* invertTree_.swift in Sources */,
+				269C4F6926CBA90C0069205E /* util.swift in Sources */,
 				26E0AE3526C946C000E697E5 /* isPrefixString.swift in Sources */,
 				26E0AE3726C946C000E697E5 /* searchInsert.swift in Sources */,
 				269ECA6E26CA4A41001EF912 /* islandPerimeter.swift in Sources */,
