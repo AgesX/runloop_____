@@ -40,16 +40,16 @@ class Solution {
     
     
     
-    func generateTrees(left lhs: Int, right rhs: Int) -> [TreeNode?]{
+    func generateTrees(left lhs: Int, right rhs: Int) -> [Int?]{
         guard lhs <= rhs else {
             if lhs == rhs{
-                return [TreeNode(lhs)]
+                return [lhs]
             }
             else{
                 return []
             }
         }
-        var result: [TreeNode?] = []
+        var result: [Int?] = []
         var i = lhs
         
         while i <= rhs {
@@ -57,10 +57,14 @@ class Solution {
             if i > lhs{
                 let lhsArr = generateTrees(left: lhs, right: i - 1)
                 
+                
             }
+            
             
             if i < rhs{
                 let rhsArr = generateTrees(left: i + 1, right: rhs)
+                
+                
             }
             
             
