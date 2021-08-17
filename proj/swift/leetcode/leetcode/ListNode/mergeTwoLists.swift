@@ -9,56 +9,6 @@ import Foundation
 
 
 
-//  Definition for singly-linked list.
-
-
-
-public class ListNode {
-    public var val: Int
-    public var next: ListNode?
-    public init() { self.val = 0; self.next = nil; }
-    public init(_ val: Int) { self.val = val; self.next = nil; }
-    public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
-    
-    
-    
-    init(array arr: [Int]) {
-        
-        let cnt = arr.count
-        var i = 0
-        let dummy = ListNode()
-        var cur: ListNode? = dummy
-        while i < cnt {
-            cur?.next = ListNode(arr[i])
-            cur = cur?.next
-            i += 1
-        }
-        val = dummy.next?.val ?? -1
-        next = dummy.next?.next
-        
-    }
-    
-    
-}
-
-
-
-extension ListNode{
-    
-    var desp: String{
-        var info = String(val)
-        var cur = self
-        while let node = cur.next{
-            info += " -> \(node.val)"
-            cur = node
-        }
-        return info
-    }
-    
-}
-
-
-
 
 
 class Solution_two {
