@@ -18,7 +18,7 @@ class Solution {
         guard n > 0 else {
             return []
         }
-        return generateTrees(left: 0, right: n)
+        return generateTrees(left: 1, right: n)
     }
     
     
@@ -46,21 +46,29 @@ class Solution {
             }
             let leftSum = lhsArr.count
             let rightSum = rhsArr.count
+            
+            
+            // 保证二叉树，有序， BST
+            
+            // 因为下面的操作，就是默认有序的
+            
             switch (leftSum > 0, rightSum > 0) {
             case (true, true):
+                // 这个是，主要流程
                 var kkk = 0
                 while kkk < leftSum {
                     var mmm = 0
                     while mmm < rightSum {
                         let node = TreeNode(i)
                         node.left = lhsArr[kkk]
-                        node.right = rhsArr[kkk]
+                        node.right = rhsArr[mmm]
                         mmm += 1
                         result.append(node)
                     }
                     kkk += 1
                 }
             case (true, false):
+                // 边界处理， 1
                 var hhh = 0
                 while hhh < leftSum {
                     let node = TreeNode(i)
@@ -70,6 +78,7 @@ class Solution {
                     result.append(node)
                 }
             case (false, true):
+                // 边界处理， 2
                 var jjj = 0
                 while jjj < rightSum {
                     let node = TreeNode(i)
@@ -82,13 +91,8 @@ class Solution {
                 fatalError("ha ha ha")
             }
             
-            
             i += 1
         }
-        
-        
-        
-        
         
         return result
     }
@@ -102,16 +106,26 @@ class Solution {
 
 
 
+var index = 3
+index = 4
+
+let result = Solution().generateTrees(index)
+
+
+result.forEach { no in
+    
+    if let nnn = no{
+        print(nnn)
+    }
+    else{
+        print("y y y")
+    }
+    
+}
 
 
 
-
-
-
-
-
-
-
+//  95. Unique Binary Search Trees II
 
 
 
