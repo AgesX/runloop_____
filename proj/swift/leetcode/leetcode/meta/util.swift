@@ -86,3 +86,46 @@ extension Array where Element == Int?{
     
     
 }
+
+
+
+
+
+
+extension Array where Element == Int?{
+    
+    func arrayDenseToNode() -> TreeNode?{
+        
+        
+        var nodes = [TreeNode?]()
+        for num in 0..<count{
+            if let val = self[num]{
+                nodes.append(TreeNode(val))
+            }
+            else{
+                nodes.append(nil)
+            }
+        }
+        
+        
+        var queue: [Int] = [0]
+        var edge = 0
+        while queue.isEmpty == false {
+            let index = queue.removeFirst()
+            let left = edge + 1
+            let right = edge + 2
+            if left < count, nodes[left]?.val != nil{
+                queue.append(left)
+                nodes[index]?.left = nodes[left]
+            }
+            if right < count, nodes[right]?.val != nil{
+                queue.append(right)
+                nodes[index]?.right = nodes[right]
+            }
+            edge += 2
+        }
+        return nodes.first!
+    }
+    
+    
+}
