@@ -40,13 +40,16 @@ extension Array where Element == Int{
         
         
         var nodes = [ListNode]()
-        for num in 0..<self.count{
+        let cnt = count
+        for num in 0..<cnt{
             nodes.append(ListNode(self[num]))
         }
-        
-        for i in 0...self.count-2{
-            nodes[i].next = nodes[i+1]
+        if cnt - 2 > 0{
+            for i in 0...cnt-2{
+                nodes[i].next = nodes[i+1]
+            }
         }
+        
         return nodes.first!
     }
     

@@ -42,7 +42,7 @@ class Solution_B {
         let result = Solution_B().deleteDuplicates(one)
 
 
-        print(result?.desp ?? "X x _")
+        print(result ?? "X x _")
     }
 }
 

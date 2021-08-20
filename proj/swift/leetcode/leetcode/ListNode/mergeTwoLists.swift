@@ -78,17 +78,17 @@ class Solution_two {
         //
 
 
-        print("lhs:  ", lhs.desp)
+        print("lhs:  ", lhs)
 
 
-        print("rhs:  ", rhs.desp)
+        print("rhs:  ", rhs)
 
         print("\n\n\n")
 
         let result = Solution_two().mergeTwoLists(lhs, rhs)
 
 
-        print(result?.desp ?? "哈哈哈")
+        print(result ?? "哈哈哈")
     }
 }
 

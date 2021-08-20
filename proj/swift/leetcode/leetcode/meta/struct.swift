@@ -134,9 +134,9 @@ public class ListNode {
 
 
 
-extension ListNode{
+extension ListNode: CustomStringConvertible{
     
-    var desp: String{
+    public var description: String{
         var info = String(val)
         var cur = self
         while let node = cur.next{
