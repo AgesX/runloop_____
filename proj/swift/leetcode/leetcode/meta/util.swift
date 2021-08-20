@@ -14,17 +14,21 @@ extension Array where Element == Int{
     
     func arrayToTree() -> TreeNode{
 
-        
+        let cnt = count
         var nodes = [TreeNode]()
-        for num in 0..<self.count{
+        for num in 0..<cnt{
             nodes.append(TreeNode(self[num]))
         }
         
         
         var i = 0
         repeat{
-            nodes[i].left = nodes[2 * i + 1]
-            nodes[i].right = nodes[2 * i + 2]
+            if 2 * i + 1 < cnt{
+                nodes[i].left = nodes[2 * i + 1]
+            }
+            if 2 * i + 2 < cnt{
+                nodes[i].right = nodes[2 * i + 2]
+            }
             i+=1
         }while i < (self.count)/2
  
