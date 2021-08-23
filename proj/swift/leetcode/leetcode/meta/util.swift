@@ -168,3 +168,24 @@ extension String {
     
     
 }
+
+
+
+
+extension Substring {
+
+    var maxLetters: Int{
+        return Set(self).count
+    }
+    
+    
+    var maxL: Int{
+        var set = Set<Character>()
+        for char in self{
+            set.insert(char)
+        }
+        return set.count
+    }
+    
+    
+}
