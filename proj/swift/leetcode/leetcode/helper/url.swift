@@ -31,9 +31,13 @@ extension Web{
 
 
     func test(){
-        let input = "1448. Count Good Nodes in Binary Tree"
+        var input = "1448. Count Good Nodes in Binary Tree"
 
-
+        //  https://leetcode.com/problems/count-good-nodes-in-binary-tree/
+        
+        input = "653. Two Sum IV - Input is a BST"
+        
+        //  https://leetcode.com/problems/two-sum-iv-input-is-a-bst/
 
         let result = output(for: input)
 
@@ -41,7 +45,7 @@ extension Web{
 
 
 
-        //  https://leetcode.com/problems/count-good-nodes-in-binary-tree/
+        
 
 
         // en page

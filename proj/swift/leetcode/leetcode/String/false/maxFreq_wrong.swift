@@ -136,7 +136,7 @@ class Solution_try {
 // 包含，就 + 1
 
 
-class Solution_maxFreq{
+class Solution_maxFreq_haha{
     
     
     
@@ -188,7 +188,7 @@ class Solution_maxFreq{
 
 
 
-extension Solution_maxFreq{
+extension Solution_maxFreq_haha{
     
     
     func test(){
@@ -198,7 +198,7 @@ extension Solution_maxFreq{
         let s = "aababcaab", maxLetters = 2, minSize = 3, maxSize = 4
 
 
-        let result = Solution_maxFreq().maxFreq(s, maxLetters, minSize, maxSize)
+        let result = Solution_maxFreq_haha().maxFreq(s, maxLetters, minSize, maxSize)
 
 
         print("result: \n\n\n", result)
