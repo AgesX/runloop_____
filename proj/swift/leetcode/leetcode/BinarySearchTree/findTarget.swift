@@ -12,7 +12,8 @@ import Foundation
 // 没有利用条件
 
 
-class Solution {
+
+class Solution_findTarget{
     
     
     func findTarget(_ root: TreeNode?, _ k: Int) -> Bool {
@@ -65,4 +66,6 @@ class Solution {
 
 
 
-//  
+
+
+//    653. Two Sum IV - Input is a BST
