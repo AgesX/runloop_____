@@ -109,14 +109,10 @@ class Solution {
                 p += 1
             }
         }
-        return result.sorted { lhs, rhs in
-            let left = lhs.sorted(by: <).reduce(0) { result, cake in
-                result + cake
-            }
-            let right = rhs.sorted(by: <).reduce(0) { result, cake in
-                result + cake
-            }
-            return left < right
+        return result.map({ arr in
+            arr.sorted(by: <)
+        }).sorted { lhs, rhs in
+            return lhs.ascend(rhs: rhs)
         }
     }
 }
@@ -180,7 +176,31 @@ func insect(lhs left: [[Int]], rhs right: [[Int]]){
 
 
 
+extension Array where Element == Int{
+    
+    func ascend(rhs right: [Int]) -> Bool{
+        let cnt = count
+        var i = 0
+        while i < cnt {
+            if self[i] < right[i]{
+                return true
+            }
+            else if self[i] > right[i]{
+                return false
+            }
+            i += 1
+        }
+        return true
+    }
+    
+}
+
+
+
 extension Array where Element == [Int]{
+    
+    
+    
     
     
     mutating
