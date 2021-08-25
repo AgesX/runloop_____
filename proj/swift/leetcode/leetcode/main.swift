@@ -11,7 +11,7 @@ import Foundation
 
 // 分表大法更好
 
-class Solution {
+class Solution_wrong_and_close {
     func threeSum(_ nums: [Int]) -> [[Int]] {
         
         let cnt = nums.count
@@ -55,18 +55,20 @@ class Solution {
         }
         
         var result = [[Int]]()
+        var hasSet = Set<String>()
       //  let zeroCnt = dictZero.count
       //  print(zeroCnt, dictZero)
         if let zeroCnt = dictZero[0]{
             if zeroCnt >= 3{
                 result.append([0, 0, 0])
             }
-            else if zeroCnt >= 1{
-                let lessK = dictLess.keys
-                for k in lessK{
+            if zeroCnt >= 1{
+                for k in arrLess{
                     let left = k * (-1)
-                    if dictMore.keys.contains(left){
-                        result.append([0, k, left])
+                    let tmp = [0, k, left].sorted(by: <)
+                    if dictMore[left] != nil, hasSet.contains(tmp.fingerPrint) == false{
+                        result.append(tmp)
+                        hasSet.insert(tmp.fingerPrint)
                     }
                 }
             }
@@ -84,7 +86,11 @@ class Solution {
                 let val = arrLess[i] + arrLess[j]
                 let left = val * (-1)
                 if arrMore.contains(left){
-                    result.append([arrLess[i], arrLess[j], left])
+                    let tmp = [arrLess[i], arrLess[j], left].sorted(by: <)
+                    if hasSet.contains(tmp.fingerPrint) == false{
+                        result.append(tmp)
+                        hasSet.insert(tmp.fingerPrint)
+                    }
                 }
                 j += 1
             }
@@ -95,30 +101,32 @@ class Solution {
             var p = 0
             while p < moreCnt {
                 let upshot = left - arrMore[p]
+                let tmp = [oreo, arrMore[p], upshot].sorted(by: <)
                 if let val = dictMore[upshot]{
-                    if upshot == upshot{
-                        if val > 1{
-                            result.append([oreo, arrMore[p], upshot])
-                            dictMore[upshot] = val - 1
+                    if arrMore[p] == upshot{
+                        if val > 1, hasSet.contains(tmp.fingerPrint) == false{
+                            result.append(tmp)
+                            hasSet.insert(tmp.fingerPrint)
                         }
                     }
                     else{
-                        result.append([oreo, arrMore[p], upshot])
+                        if hasSet.contains(tmp.fingerPrint) == false{
+                            result.append(tmp)
+                            hasSet.insert(tmp.fingerPrint)
+                        }
                     }
                 }
                 p += 1
             }
         }
-        return result.map({ arr in
-            arr.sorted(by: <)
-        }).sorted { lhs, rhs in
+        return result.sorted { lhs, rhs in
             return lhs.ascend(rhs: rhs)
         }
     }
 }
 
 
-/*
+
 
 var arr = [-1,0,1,2,-1,-4]
 
@@ -126,7 +134,11 @@ arr = [0,0,0]
 
 arr = [1,1,-2]
 
-let result = Solution().threeSum(arr)
+
+arr = [-1,0,1,2,-1,-4,-2,-3,3,0,4]
+
+arr = [-4,-2,1,-5,-4,-4,4,-2,0,4,0,-2,3,1,-5,0]
+let result = Solution_wrong_and_close().threeSum(arr)
 
 
 print(result)
@@ -135,7 +147,7 @@ print(result)
 
 
 print("\n\n\n")
-*/
+
 
 
 
@@ -226,4 +238,8 @@ let lhsX = [[0,-1,1],[0,-3,3],[0,-2,2],[0,-4,4],[-3,-1,4],[-3,-1,4],[-2,-1,3],[-
 let rhsX = [[-4,0,4],[-4,1,3],[-3,-1,4],[-3,0,3],[-3,1,2],[-2,-1,3],[-2,0,2],[-1,-1,2],[-1,0,1]]
 
 
-insect(lhs: lhsX, rhs: rhsX)
+// insect(lhs: lhsX, rhs: rhsX)
+
+
+
+//  15. 3Sum
