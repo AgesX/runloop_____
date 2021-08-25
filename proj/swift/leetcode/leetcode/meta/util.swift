@@ -156,7 +156,10 @@ extension String {
          return String(self[start...])
     }
     
+}
     
+    
+extension String {
     
     var maxLetters: Int{
         var set = Set<Character>()

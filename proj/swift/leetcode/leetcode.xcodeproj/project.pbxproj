@@ -14,6 +14,7 @@
 		2659D19F26D4D150000B1117 /* simplifyPathX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2659D19E26D4D150000B1117 /* simplifyPathX.swift */; };
 		2659D1A126D4D213000B1117 /* simplifyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2659D1A026D4D213000B1117 /* simplifyPath.swift */; };
 		268ABE6B26C52F3300E25548 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268ABE6A26C52F3300E25548 /* main.swift */; };
+		2694464026D5D40600A23D5D /* complexNumberMultiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2694463F26D5D40600A23D5D /* complexNumberMultiply.swift */; };
 		269C4F6626CB9D470069205E /* generateTrees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C4F6526CB9D470069205E /* generateTrees.swift */; };
 		269C4F6926CBA90C0069205E /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C4F6826CBA90C0069205E /* util.swift */; };
 		269C4F6B26CBABCE0069205E /* struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C4F6A26CBABCE0069205E /* struct.swift */; };
@@ -55,6 +56,7 @@
 		2659D1A026D4D213000B1117 /* simplifyPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simplifyPath.swift; sourceTree = "<group>"; };
 		268ABE6726C52F3300E25548 /* leetcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leetcode; sourceTree = BUILT_PRODUCTS_DIR; };
 		268ABE6A26C52F3300E25548 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2694463F26D5D40600A23D5D /* complexNumberMultiply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = complexNumberMultiply.swift; sourceTree = "<group>"; };
 		269C4F6526CB9D470069205E /* generateTrees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generateTrees.swift; sourceTree = "<group>"; };
 		269C4F6826CBA90C0069205E /* util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = util.swift; sourceTree = "<group>"; };
 		269C4F6A26CBABCE0069205E /* struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = struct.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				269C4F6E26CBAEF10069205E /* helper */,
 				26E0AE3126C946C000E697E5 /* ListNode */,
 				268ABE6A26C52F3300E25548 /* main.swift */,
+				2694463E26D5D3EC00A23D5D /* math */,
 				269C4F6726CBA8F10069205E /* meta */,
 				26AE907526CF8A4900ED05F0 /* Sample */,
 				26E0AE2926C946C000E697E5 /* Stack */,
@@ -144,6 +147,14 @@
 				269ECA6C26CA4A35001EF912 /* TreeToMap */,
 			);
 			path = leetcode;
+			sourceTree = "<group>";
+		};
+		2694463E26D5D3EC00A23D5D /* math */ = {
+			isa = PBXGroup;
+			children = (
+				2694463F26D5D40600A23D5D /* complexNumberMultiply.swift */,
+			);
+			path = math;
 			sourceTree = "<group>";
 		};
 		269C4F6726CBA8F10069205E /* meta */ = {
@@ -336,6 +347,7 @@
 				269C4F6626CB9D470069205E /* generateTrees.swift in Sources */,
 				2659D19A26D4A278000B1117 /* findTarget_false.swift in Sources */,
 				2659D19F26D4D150000B1117 /* simplifyPathX.swift in Sources */,
+				2694464026D5D40600A23D5D /* complexNumberMultiply.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
