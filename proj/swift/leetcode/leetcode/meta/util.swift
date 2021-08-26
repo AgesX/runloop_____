@@ -143,6 +143,9 @@ extension Array where Element == Int?{
 
 
 
+
+
+
 extension String {
     subscript(_ range: CountableRange<Int>) -> String {
         let start = index(startIndex, offsetBy: max(0, range.lowerBound))

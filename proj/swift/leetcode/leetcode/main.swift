@@ -30,7 +30,7 @@ class Solution {
         guard queue.isEmpty == false else {
             return false
         }
-        let node = queue.arrayDenseToNode()
+        let node = queue.arrayDenseToNodePre()
         print(node ?? " _ ")
         
         return true
@@ -41,8 +41,10 @@ class Solution {
 
 
 
-var input = "9,3,4,#,#,1,#,#,2,#,6,#,#"
+var input = "9,3,4,#,#,1,#,#,2"
 
+
+// input = "9,3,4,#,#,1,#,#"
 
 
 
