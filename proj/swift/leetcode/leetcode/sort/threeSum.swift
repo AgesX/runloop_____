@@ -16,7 +16,7 @@ import Foundation
 
 
 
-class Solution {
+class Solution_threeSum {
     func threeSum(_ nums: [Int]) -> [[Int]] {
         let cnt = nums.count
         var result = [[Int]]()

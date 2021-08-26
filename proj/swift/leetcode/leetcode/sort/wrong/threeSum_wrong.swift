@@ -326,7 +326,7 @@ extension Collection where Element == Int{
 }
 
 
-class Solution_threeSum {
+class Solution_threeSum_Xxx {
     func threeSum(_ nums: [Int]) -> [[Int]] {
         
         let cnt = nums.count
@@ -388,7 +388,7 @@ class Solution_threeSum {
 
 
 
-extension Solution_threeSum{
+extension Solution_threeSum_Xxx{
     
     
     func test(){
