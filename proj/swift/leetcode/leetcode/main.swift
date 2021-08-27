@@ -27,13 +27,9 @@ class Solution {
                 }
             }
         }
-        guard queue.isEmpty == false else {
-            return false
-        }
         let node = queue.arrayDenseToNodePre()
         print(node ?? " _ ")
-        
-        return true
+        return queue.arrayCheckNodePre
     }
 }
 
@@ -41,10 +37,22 @@ class Solution {
 
 
 
+
 var input = "9,3,4,#,#,1,#,#,2"
 
+input = "9,3,4,#,#,1,#,#,2,#,6,#,#"
 
-// input = "9,3,4,#,#,1,#,#"
+input = "1,#"
+
+input = "9,#,#,1"
+
+input = "1"
+
+input = "9,3,4,#,#,1,#,#,2,#,6,#,#"
+
+input = "9,3,4,#,#,1,#,#,2,#,6,#,#"
+
+print(Solution().isValidSerialization(input))
 
 
 
@@ -52,10 +60,21 @@ var input = "9,3,4,#,#,1,#,#,2"
 
 
 
-Solution().isValidSerialization(input)
+
+
+Web().test()
 
 
 
+
+
+
+
+
+
+
+
+//  331. Verify Preorder Serialization of a Binary Tree
 
 
 
