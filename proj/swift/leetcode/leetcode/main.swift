@@ -50,7 +50,7 @@ input = "1"
 
 input = "9,3,4,#,#,1,#,#,2,#,6,#,#"
 
-input = "9,3,4,#,#,1,#,#,2,#,6,#,#"
+input = "1,#,#"
 
 print(Solution().isValidSerialization(input))
 

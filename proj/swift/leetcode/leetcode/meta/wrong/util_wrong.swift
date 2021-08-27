@@ -72,6 +72,11 @@ extension Array where Element == Int?{
 
 
 
+
+
+// 乱七八糟， 彻底放弃
+
+
 extension Array where Element == Int?{
     
     var arrayCheckNodePre: Bool{
@@ -87,10 +92,23 @@ extension Array where Element == Int?{
             }
         }
         
+        guard count > 2 else {
+            if count == 1, nodes[0] == nil{
+                return true
+            }
+            else{
+                return false
+            }
+            
+        }
+        
+        
         
         var stack: [Int] = [0]
         var i = 0
-        while i < count{
+        var isEnd = false
+        while i < count - 2{
+            isEnd = false
             if let index = stack.last{
                 let left = i + 1
                 if left < count{
@@ -100,18 +118,22 @@ extension Array where Element == Int?{
                             if nodes[right]?.val == nil{
                                 nodes[index]?.left = nil
                                 nodes[index]?.right = nil
+                                isEnd = true
                                 if stack.isEmpty{
                                     return false
                                 }
                                 else{
                                     stack.popLast()
-                                    if stack.isEmpty, i + 1 < count{
+                                    if stack.isEmpty, right + 1 < count{
                                         print(nodes[0] ?? "  ")
                                         return false
                                     }
                                 }
                             }
                             else{
+                                if nodes[index] == nil{
+                                    return false
+                                }
                                 stack.append(right)
                                 nodes[index]?.right = nodes[right]
                             }
@@ -122,6 +144,9 @@ extension Array where Element == Int?{
                         }
                     }
                     else{
+                        if nodes[index] == nil{
+                            return false
+                        }
                         if nodes[index]?.left == nil{
                             nodes[index]?.left = nodes[left]
                         }
@@ -140,15 +165,20 @@ extension Array where Element == Int?{
             }
             i += 1
         }
+        
+        
         while stack.isEmpty == false{
             if nodes[stack[0]]?.left != nil, nodes[stack[1]]?.right != nil{
+                stack.removeFirst()
+            }
+            else if isEnd, nodes[stack[0]]?.right != nil{
                 stack.removeFirst()
             }
             else{
                 break
             }
         }
-        print(nodes[stack[0]] ?? "X")
+  //      print(nodes[stack[0]] ?? "X")
         return stack.isEmpty
     }
     
