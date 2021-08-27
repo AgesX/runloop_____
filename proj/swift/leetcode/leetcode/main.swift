@@ -10,7 +10,6 @@ import Foundation
 
 
 
-
 class Solution {
  
     func rotateRight(_ head: ListNode?, _ k: Int) -> ListNode? {
@@ -28,46 +27,29 @@ class Solution {
             cnt += 1
         }
         
-        let validK = k % cnt
+        let validK = cnt - k % cnt
         
         guard validK > 0 else {
             return n
         }
-        let dummy = ListNode(0)
-        dummy.next = head
-        var curLast: ListNode? = dummy
+        let dummyTwo = ListNode(0)
+        dummyTwo.next = head
+        var curLastTwo: ListNode? = dummyTwo
+        end?.next = head
         cnt = 0
         while cnt < validK {
-            curLast = curLast?.next
+            curLastTwo = curLastTwo?.next
             cnt += 1
         }
-        
-        
-
-        if let result = curLast?.next?.next{
-            curLast?.next?.next = nil
-            end?.next = head
-            return result
-        }
-        else{
-            let dummyTwo = ListNode(0)
-            dummyTwo.next = head
-            var curLastTwo: ListNode? = dummyTwo
-            end?.next = head
-            cnt = 0
-            while cnt < validK {
-                curLastTwo = curLastTwo?.next
-                cnt += 1
-            }
-            let result = curLastTwo?.next?.next?.next
-            curLastTwo?.next?.next?.next = nil
-            return result
-        }
+        let result = curLastTwo?.next
+        curLastTwo?.next = nil
+        return result
     }
 }
 
 
 
+//  61. Rotate List
 
 var arr = [1,2,3]
 
