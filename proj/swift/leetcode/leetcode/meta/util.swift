@@ -44,7 +44,7 @@ extension Array where Element == Int{
         for num in 0..<cnt{
             nodes.append(ListNode(self[num]))
         }
-        if cnt - 2 > 0{
+        if cnt - 1 > 0{
             for i in 0...cnt-2{
                 nodes[i].next = nodes[i+1]
             }
