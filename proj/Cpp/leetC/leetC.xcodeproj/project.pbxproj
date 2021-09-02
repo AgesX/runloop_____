@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		262B866726E0BDC8009B6FA6 /* maxProfit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 262B866526E0BDC8009B6FA6 /* maxProfit.cpp */; };
 		26E0AE4E26C94CA000E697E5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26E0AE4D26C94CA000E697E5 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		262B866526E0BDC8009B6FA6 /* maxProfit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = maxProfit.cpp; sourceTree = "<group>"; };
+		262B866626E0BDC8009B6FA6 /* maxProfit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = maxProfit.hpp; sourceTree = "<group>"; };
 		26E0AE4A26C94CA000E697E5 /* leetC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leetC; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E0AE4D26C94CA000E697E5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				26E0AE4D26C94CA000E697E5 /* main.cpp */,
+				262B866526E0BDC8009B6FA6 /* maxProfit.cpp */,
+				262B866626E0BDC8009B6FA6 /* maxProfit.hpp */,
 			);
 			path = leetC;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				262B866726E0BDC8009B6FA6 /* maxProfit.cpp in Sources */,
 				26E0AE4E26C94CA000E697E5 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
