@@ -9,62 +9,30 @@ import Foundation
 
 
 
+let arr: [Int?] = [3,1,4,3, nil,1,5]
 
-class Solution {
- 
-    func rotateRight(_ head: ListNode?, _ k: Int) -> ListNode? {
-    
-        guard let n = head else {
-            return nil
-        }
-        
-        var cur = head
-        var cnt = 0
-        var end: ListNode? = nil
-        while cur != nil {
-            end = cur
-            cur = cur?.next
-            cnt += 1
-        }
-        
-        let validK = cnt - k % cnt
-        
-        guard validK > 0 else {
-            return n
-        }
-        let dummyTwo = ListNode(0)
-        dummyTwo.next = head
-        var curLastTwo: ListNode? = dummyTwo
-        end?.next = head
-        cnt = 0
-        while cnt < validK {
-            curLastTwo = curLastTwo?.next
-            cnt += 1
-        }
-        let result = curLastTwo?.next
-        curLastTwo?.next = nil
-        return result
+let node = arr.arrayToTree()
+
+// 深度优先
+func inorder(visitor node: TreeNode?) -> [Int]{
+    guard let n = node else {
+        return []
     }
+    var result = [Int]()
+    if let lhs = node?.left{
+        result += inorder(visitor: lhs)
+    }
+    result.append(n.val)
+    if let rhs = node?.right{
+        result += inorder(visitor: rhs)
+    }
+    return result
 }
 
 
-
-//  61. Rotate List
-
-var arr = [1,2,3]
-
-// arr = [1,2]
-
-arr = [1,2,3,4,5]
-
-let input = arr.arrayToLinkedList()
-
-print(input)
-
-let output = Solution().rotateRight(input, 1)
-
-
-print(output ?? " x x ")
+print(node ?? "  ")
+print("\n\n")
+print(inorder(visitor: node))
 
 
 print("\n\n\n")
