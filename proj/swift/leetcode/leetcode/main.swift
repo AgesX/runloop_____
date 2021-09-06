@@ -6,125 +6,45 @@ import Foundation
 
 
 
-class Solution_uniquePathsIII {
-    
-    
-    struct Pos: Hashable {
-        let x: Int
-        let y: Int
+
+
+class Solution_slowestKey {
+    func slowestKey(_ releaseTimes: [Int], _ keysPressed: String) -> Character {
+        let cnt = releaseTimes.count
+        var current = keysPressed.startIndex
+        let start = keysPressed[current]
+        guard cnt > 1 else {
+            return start
+        }
         
-        func check(in grid: [[Int]], _ visited: inout Set<Pos>) -> Bool{
-            var ok = true
-            if grid[x][y] == -1{
-                ok = false
-                visited.insert(self)
+        var i = 1
+        var tmp = start
+        var last = releaseTimes[0]
+        
+        
+        
+        while i < cnt {
+            current = keysPressed.index(current, offsetBy: 1)
+            let val = releaseTimes[i] - releaseTimes[i - 1]
+          //  print(last,  "   " , val)
+            let figureI = keysPressed[current]
+            if val > last{
+                tmp = figureI
+                last = val
             }
-            return ok && !( visited.contains(self) )
-        }
-    }
-    
-    
-    func uniquePathsIII(_ grid: [[Int]]) -> Int {
-        let m = grid.count
-        guard m > 0 else {
-            return 0
-        }
-        let n = grid[0].count
-        guard n > 0 else {
-            return 0
-        }
-        var begin: Pos? = nil
-        var final: Pos? = nil
-        for i in 0..<m{
-            for j in 0..<n{
-                switch grid[i][j] {
-                case 1:
-                    begin = Pos(x: i, y: j)
-                case 2:
-                    final = Pos(x: i, y: j)
-                default: ()
-                }
+            else if val == last, tmp.ascII_scalar < figureI.ascII_scalar{
+                tmp = figureI
             }
+            
+            i += 1
         }
-        guard let start = begin, let end = final else {
-            return 0
-        }
-        print(start, end)
-        return uniquePathsIII(grid, visited: Set([start]), m, n, start, end)
-    }
-    
-    
-    
-    func uniquePathsIII(_ grid: [[Int]], visited seen: Set<Pos>, _ m: Int, _ n: Int, _ start: Pos, _ end: Pos) -> Int {
-        guard start != end else {
-           // print(seen.count)
-            if seen.count == m * n{
-                return 1
-            }
-            else{
-                return 0
-            }
-        }
-        var visited = seen
-        var result = 0
-        if start.x > 0{
-            let left = Pos(x: start.x - 1, y: start.y)
-            if left.check(in: grid, &visited){
-                var arr = visited
-                arr.insert(left)
-                result += uniquePathsIII(grid, visited: arr, m, n, left, end)
-            }
-        }
-        if start.x <= m - 2{
-            let rhs = Pos(x: start.x + 1, y: start.y)
-            if rhs.check(in: grid, &visited){
-                var arr = visited
-                arr.insert(rhs)
-                result += uniquePathsIII(grid, visited: arr, m, n, rhs, end)
-            }
-        }
-        if start.y > 0{
-            let up = Pos(x: start.x, y: start.y - 1)
-            if up.check(in: grid, &visited){
-                var arr = visited
-                arr.insert(up)
-                result += uniquePathsIII(grid, visited: arr, m, n, up, end)
-            }
-        }
-        if start.y <= n - 2{
-            let down = Pos(x: start.x, y: start.y + 1)
-            if down.check(in: grid, &visited){
-                var arr = visited
-                arr.insert(down)
-                result += uniquePathsIII(grid, visited: arr, m, n, down, end)
-            }
-        }
-        return result
+        return tmp
     }
 }
 
 
 
-
-
-extension Solution_uniquePathsIII{
-    
-    
-    func test(){
-        
-        var arr = [[1,0,0,0],[0,0,0,0],[0,0,2,-1]]
-
-        let result = Solution_uniquePathsIII().uniquePathsIII(arr)
-
-
-        print(result)
-        
-    }
-    
-    
-}
-
-
+//  1629. Slowest Key
 
 
 
@@ -135,31 +55,55 @@ print("\n\n\n")
 
 
 
-// 图，就是树
+
+
+extension Solution_slowestKey{
+    
+    func test(){
+        var release = [12,23,36,46,62]
+        var key = "spuda"
 
 
 
-// 图上面，一般的节点，
+        release = [23,34,43,59,62,80,83,92,97]
+        key = "qgkzzihfc"
 
+        let result = Solution_slowestKey().slowestKey(release, key)
 
-
-// 就是 4 叉树，
-// 4 个分支
-
-
-
-
-
-
-
-
-//  980. Unique Paths III
-
-//  必须深度优先
+        print(result)
+    }
+    
+}
 
 
 
 
-// 动态规划，就是一种深度优先
+
+
+
+extension Character{
+    
+    var ascII_val: Int{
+        if let val = unicodeScalars.first?.value{
+            return Int(val)
+        }
+        else{
+            return -1
+        }
+    }
+    
+    
+    
+    var ascII_scalar: Int{
+        if let val = asciiValue{
+            return Int(val)
+        }
+        else{
+            return -1
+        }
+    }
+    
+}
+
 
 

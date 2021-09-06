@@ -8,6 +8,9 @@
 import Foundation
 
 
+import Cocoa
+
+
 
 class Web{
     
@@ -73,9 +76,20 @@ extension Web{
         
         input = "565. Array Nesting"
         
+        
+        input = "Slowest Key"
         result = output(for: input)
         
         print(result)
+        
+        
+        if let url = URL(string: result) {
+            NSWorkspace.shared.open(url)
+        }
+        
+        
+        
+        
 
 
         // en page
