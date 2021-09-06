@@ -9,21 +9,18 @@ import Foundation
 class Solution {
     
     
-    
-    var map = [[Int]]()
-    
-    struct Pos {
+    struct Pos: Hashable {
         let x: Int
         let y: Int
     }
     
     
     func uniquePathsIII(_ grid: [[Int]]) -> Int {
-        var m = grid.count
+        let m = grid.count
         guard m > 0 else {
             return 0
         }
-        var n = grid[0].count
+        let n = grid[0].count
         guard n > 0 else {
             return 0
         }
@@ -43,16 +40,12 @@ class Solution {
         guard let start = begin, let end = final else {
             return 0
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        return uniquePathsIII(grid, Set([start]), m, n, end)
+    }
+    
+    
+    
+    func uniquePathsIII(_ grid: [[Int]], _ visited: Set<Pos>, _ m: Int, _ n: Int, _ end: Pos) -> Int {
         
         
         
