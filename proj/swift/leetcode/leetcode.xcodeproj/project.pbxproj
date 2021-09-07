@@ -49,6 +49,7 @@
 		26E7A8FD26E711AE007DE3B0 /* orderlyQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A8FC26E711AE007DE3B0 /* orderlyQueue.swift */; };
 		26E7A90126E714BF007DE3B0 /* levelOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A90026E714BF007DE3B0 /* levelOrder.swift */; };
 		26E7A90326E735BA007DE3B0 /* zigzagLevelOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A90226E735BA007DE3B0 /* zigzagLevelOrder.swift */; };
+		26E7A90526E73B8E007DE3B0 /* levelOrderBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A90426E73B8E007DE3B0 /* levelOrderBottom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -107,6 +108,7 @@
 		26E7A8FC26E711AE007DE3B0 /* orderlyQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderlyQueue.swift; sourceTree = "<group>"; };
 		26E7A90026E714BF007DE3B0 /* levelOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = levelOrder.swift; sourceTree = "<group>"; };
 		26E7A90226E735BA007DE3B0 /* zigzagLevelOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zigzagLevelOrder.swift; sourceTree = "<group>"; };
+		26E7A90426E73B8E007DE3B0 /* levelOrderBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = levelOrderBottom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,6 +375,7 @@
 			children = (
 				26E7A90026E714BF007DE3B0 /* levelOrder.swift */,
 				26E7A90226E735BA007DE3B0 /* zigzagLevelOrder.swift */,
+				26E7A90426E73B8E007DE3B0 /* levelOrderBottom.swift */,
 			);
 			path = WSF;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				2694464426D5E7A100A23D5D /* threeSum_wrong.swift in Sources */,
 				262B866A26E0CAF8009B6FA6 /* uniquePaths.swift in Sources */,
 				262B866226E06119009B6FA6 /* inorder.swift in Sources */,
+				26E7A90526E73B8E007DE3B0 /* levelOrderBottom.swift in Sources */,
 				26E0AE3426C946C000E697E5 /* MinStack.swift in Sources */,
 				2659D19C26D4A5C5000B1117 /* findTarget.swift in Sources */,
 				2659D19726D49E5F000B1117 /* maxFreq_wrong.swift in Sources */,

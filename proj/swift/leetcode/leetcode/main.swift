@@ -5,29 +5,43 @@ import Foundation
 
 
 
+
+
+
+
+
 class Solution {
-    func levelOrderBottom(_ root: TreeNode?) -> [[Int]] {
-        
-        var result = [[Int]]()
+    func largestValues(_ root: TreeNode?) -> [Int] {
+        var result = [Int]()
         guard let n = root else {
             return result
         }
         var levelQ = [n]
         while levelQ.isEmpty == false {
-            var nextQueue = [TreeNode]()
-            var vals = [Int]()
+            var nextQ = [TreeNode]()
+            var val: Int? = nil
             while levelQ.isEmpty == false {
                 let first = levelQ.removeFirst()
                 if let lhs = first.left{
-                    nextQueue.append(lhs)
+                    nextQ.append(lhs)
                 }
                 if let rhs = first.right{
-                    nextQueue.append(rhs)
+                    nextQ.append(rhs)
                 }
-                vals.append(first.val)
+                let tmp = first.val
+                if let v = val{
+                    if tmp > v{
+                        val = tmp
+                    }
+                }
+                else{
+                    val = tmp
+                }
             }
-            levelQ = nextQueue
-            result.insert(vals, at: 0)
+            if let v = val{
+                result.append(v)
+            }
+            levelQ = nextQ
         }
         return result
     }
@@ -37,14 +51,10 @@ class Solution {
 
 
 
-// 107. Binary Tree Level Order Traversal II
 
 
 
-
-
-
-
+//  515. Find Largest Value in Each Tree Row
 
 
 print("\n\n\n")
