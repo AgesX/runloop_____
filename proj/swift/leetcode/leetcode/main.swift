@@ -20,23 +20,29 @@ class Solution {
             return nums1.mid
         }
         var lhsIdx = lhsCnt / 2
+        let isOdd = ((lhsCnt + rhsCnt) % 2 == 1)
         while true {
             let rhsIdx = (lhsCnt + rhsCnt)/2 - lhsIdx
             
             var lhsIfOne = true
             let rhsIdxBack = rhsIdx - 1
             if rhsIdxBack >= 0{
-                lhsIfOne = nums1[lhsIdx] > nums2[rhsIdxBack]
+                lhsIfOne = nums1[lhsIdx] >= nums2[rhsIdxBack]
             }
             
             var rhsIfOne = true
             let rhsIdxForward = rhsIdx + 1
             if rhsIdxForward < rhsCnt{
-                rhsIfOne = nums1[lhsIdx] < nums2[rhsIdxForward]
+                rhsIfOne = nums1[lhsIdx] <= nums2[rhsIdxForward]
             }
             switch (lhsIfOne, rhsIfOne){
             case (true, true):
-                return Double(nums1[lhsIdx] + nums2[rhsIdx])/2
+                if isOdd{
+                    return Double(min(nums1[lhsIdx], nums2[rhsIdx]))
+                }
+                else{
+                    return Double(nums1[lhsIdx] + nums2[rhsIdx])/2
+                }
             case (true, false):
                 if lhsIdx <= 0{
                     let newArr = nums2 + nums1
@@ -88,6 +94,37 @@ print("\n\n\n")
 
 
 var nums1 = [1,3], nums2 = [2]
+
+do{
+    nums1 = [1,2]
+    nums2 = [3,4]
+}
+
+
+do{
+    nums1 = [0,0]
+    nums2 = [0,0]
+    
+}
+
+do{
+    nums1 = [0,0,0,0,0]
+    nums2 = [-1,0,0,0,0,0,1]
+}
+
+
+
+
+do{
+    nums1 = [1,3]
+    nums2 = [2,7]
+}
+
+
+
+
+
+
 
 
 let result = Solution().findMedianSortedArrays(nums1, nums2)
