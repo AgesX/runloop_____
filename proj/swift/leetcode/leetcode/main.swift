@@ -4,50 +4,64 @@
 import Foundation
 
 
+let null:Int? = nil
 
 
-
-class Solution_levelOrder {
-    func levelOrder(_ root: TreeNode?) -> [[Int]] {
+class Solution {
+    func zigzagLevelOrder(_ root: TreeNode?) -> [[Int]] {
         var result = [[Int]]()
-        
         guard let n = root else {
             return result
         }
-        
-        var queue: [TreeNode] = [n]
+        var queue = [n]
+        var lhsVisit = true
         while queue.isEmpty == false {
-            var levelQ = queue
+            var levelQueue = queue
             var levelVals = [Int]()
-            var nextQ = [TreeNode]()
-            while levelQ.isEmpty == false {
-                let node = levelQ.removeFirst()
+            var nextQueue = [TreeNode]()
+            while levelQueue.isEmpty == false{
+                let node = levelQueue.removeFirst()
                 if let lhs = node.left{
-                    nextQ.append(lhs)
+                    nextQueue.append(lhs)
                 }
                 if let rhs = node.right{
-                    nextQ.append(rhs)
+                    nextQueue.append(rhs)
                 }
                 levelVals.append(node.val)
             }
-            queue = nextQ
-            result.append(levelVals)
+            if lhsVisit{
+                result.append(levelVals)
+            }
+            else{
+                result.append(levelVals.reversed())
+            }
+            
+            queue = nextQueue
+            lhsVisit.toggle()
         }
         
         return result
     }
-    
 }
 
 
 
 
-
-// 102. Binary Tree Level Order Traversal
-
-
+//  103. Binary Tree Zigzag Level Order Traversal
 
 
 
 print("\n\n\n")
+
+var arr: [Int?] = [3,9,20,null,null,15,7]
+
+// arr = [1,2,3,4,null,null,5]
+
+let node = arr.arrayDenseToNode()
+
+
+let result = Solution().zigzagLevelOrder(node)
+
+
+print(result)
 

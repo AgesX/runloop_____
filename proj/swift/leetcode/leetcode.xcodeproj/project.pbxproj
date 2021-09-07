@@ -47,6 +47,7 @@
 		26E0AE4026C94B1C00E697E5 /* maxProfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0AE3F26C94B1C00E697E5 /* maxProfit.swift */; };
 		26E7A8FA26E6FE82007DE3B0 /* slowestKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A8F926E6FE82007DE3B0 /* slowestKey.swift */; };
 		26E7A8FD26E711AE007DE3B0 /* orderlyQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A8FC26E711AE007DE3B0 /* orderlyQueue.swift */; };
+		26E7A90126E714BF007DE3B0 /* levelOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A90026E714BF007DE3B0 /* levelOrder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -103,6 +104,7 @@
 		26E0AE3F26C94B1C00E697E5 /* maxProfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maxProfit.swift; sourceTree = "<group>"; };
 		26E7A8F926E6FE82007DE3B0 /* slowestKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = slowestKey.swift; sourceTree = "<group>"; };
 		26E7A8FC26E711AE007DE3B0 /* orderlyQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderlyQueue.swift; sourceTree = "<group>"; };
+		26E7A90026E714BF007DE3B0 /* levelOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = levelOrder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +347,7 @@
 		26E0AE3A26C946DB00E697E5 /* BinaryTree */ = {
 			isa = PBXGroup;
 			children = (
+				26E7A8FF26E714AE007DE3B0 /* WSF */,
 				262B866026E0610B009B6FA6 /* DSF */,
 				2694FAA126D8902D00835C6D /* wrong */,
 				26E0AE3D26C9477F00E697E5 /* invertTree_.swift */,
@@ -361,6 +364,14 @@
 				26E7A8FC26E711AE007DE3B0 /* orderlyQueue.swift */,
 			);
 			path = Queue;
+			sourceTree = "<group>";
+		};
+		26E7A8FF26E714AE007DE3B0 /* WSF */ = {
+			isa = PBXGroup;
+			children = (
+				26E7A90026E714BF007DE3B0 /* levelOrder.swift */,
+			);
+			path = WSF;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,6 +440,7 @@
 				2694FAA026D8901300835C6D /* isValidSerialization.swift in Sources */,
 				26AE907726CF8A5F00ED05F0 /* maxProduct_sample.swift in Sources */,
 				26E0AE3926C946C000E697E5 /* deleteDuplicates.swift in Sources */,
+				26E7A90126E714BF007DE3B0 /* levelOrder.swift in Sources */,
 				26E0AE3E26C9477F00E697E5 /* invertTree_.swift in Sources */,
 				269C4F6B26CBABCE0069205E /* struct.swift in Sources */,
 				269C4F6926CBA90C0069205E /* util.swift in Sources */,
