@@ -9,7 +9,7 @@ import Foundation
 
 
 
-class Solution {
+class Solution_reverseList {
     func reverseList(_ head: ListNode?) -> ListNode? {
         guard head != nil else {
             return nil
@@ -36,13 +36,13 @@ class Solution {
 }
 
 
-extension Solution{
+extension Solution_reverseList{
     
     func test(){
         
         let node = [1,2].arrayToLinkedList()
 
-        let result = Solution().reverseList(node)
+        let result = Solution_reverseList().reverseList(node)
 
 
         print(result ?? " X ")
@@ -56,7 +56,7 @@ extension Solution{
 
 
 
-extension Solution{
+extension Solution_reverseList{
     
     func reverseList_wrong(_ head: ListNode?) -> ListNode? {
         guard head != nil else {
