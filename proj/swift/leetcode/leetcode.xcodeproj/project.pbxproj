@@ -54,6 +54,7 @@
 		26E7A90926E74440007DE3B0 /* hasPathSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A90826E74440007DE3B0 /* hasPathSum.swift */; };
 		26E7A90B26E74B1B007DE3B0 /* pathSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A90A26E74B1B007DE3B0 /* pathSum.swift */; };
 		26E7A90D26E7536C007DE3B0 /* pathSum_third.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A90C26E7536C007DE3B0 /* pathSum_third.swift */; };
+		26E7A90F26E75980007DE3B0 /* reverseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A90E26E75980007DE3B0 /* reverseList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -117,6 +118,7 @@
 		26E7A90826E74440007DE3B0 /* hasPathSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hasPathSum.swift; sourceTree = "<group>"; };
 		26E7A90A26E74B1B007DE3B0 /* pathSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pathSum.swift; sourceTree = "<group>"; };
 		26E7A90C26E7536C007DE3B0 /* pathSum_third.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pathSum_third.swift; sourceTree = "<group>"; };
+		26E7A90E26E75980007DE3B0 /* reverseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reverseList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +357,7 @@
 				26E0AE3326C946C000E697E5 /* deleteDuplicates.swift */,
 				26AE907A26CF966200ED05F0 /* removeNthFromEnd.swift */,
 				26A315EB26DFBD62002BE26F /* rotateRight.swift */,
+				26E7A90E26E75980007DE3B0 /* reverseList.swift */,
 			);
 			path = ListNode;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				2694FAA326D8904100835C6D /* Solution_wrong_isValidSerialization.swift in Sources */,
 				26E0AE4026C94B1C00E697E5 /* maxProfit.swift in Sources */,
 				2659D19426D49E57000B1117 /* maxFreq.swift in Sources */,
+				26E7A90F26E75980007DE3B0 /* reverseList.swift in Sources */,
 				26E7A90326E735BA007DE3B0 /* zigzagLevelOrder.swift in Sources */,
 				26E0AE3826C946C000E697E5 /* mergeTwoLists.swift in Sources */,
 				262B866C26E0D8C2009B6FA6 /* uniquePathsWithObstacles.swift in Sources */,
