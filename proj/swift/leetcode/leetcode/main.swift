@@ -31,12 +31,12 @@ class Solution {
             
             var rhsIfOne = true
             let rhsIdxForward = rhsIdx + 1
-            if rhsIdxForward <= rhsCnt{
-                rhsIfOne = nums1[lhsIdx] < nums2[rhsIdx + 1]
+            if rhsIdxForward < rhsCnt{
+                rhsIfOne = nums1[lhsIdx] < nums2[rhsIdxForward]
             }
             switch (lhsIfOne, rhsIfOne){
             case (true, true):
-                return (nums1.mid + nums2.mid)/2
+                return Double(nums1[lhsIdx] + nums2[rhsIdx])/2
             case (true, false):
                 if lhsIdx <= 0{
                     let newArr = nums2 + nums1
@@ -86,3 +86,11 @@ extension Array where Element == Int{
 print("\n\n\n")
 
 
+
+var nums1 = [1,3], nums2 = [2]
+
+
+let result = Solution().findMedianSortedArrays(nums1, nums2)
+
+
+print(result)
