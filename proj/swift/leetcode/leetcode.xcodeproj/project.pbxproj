@@ -48,6 +48,7 @@
 		26E7A8FA26E6FE82007DE3B0 /* slowestKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A8F926E6FE82007DE3B0 /* slowestKey.swift */; };
 		26E7A8FD26E711AE007DE3B0 /* orderlyQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A8FC26E711AE007DE3B0 /* orderlyQueue.swift */; };
 		26E7A90126E714BF007DE3B0 /* levelOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A90026E714BF007DE3B0 /* levelOrder.swift */; };
+		26E7A90326E735BA007DE3B0 /* zigzagLevelOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A90226E735BA007DE3B0 /* zigzagLevelOrder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -105,6 +106,7 @@
 		26E7A8F926E6FE82007DE3B0 /* slowestKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = slowestKey.swift; sourceTree = "<group>"; };
 		26E7A8FC26E711AE007DE3B0 /* orderlyQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderlyQueue.swift; sourceTree = "<group>"; };
 		26E7A90026E714BF007DE3B0 /* levelOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = levelOrder.swift; sourceTree = "<group>"; };
+		26E7A90226E735BA007DE3B0 /* zigzagLevelOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zigzagLevelOrder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				26E7A90026E714BF007DE3B0 /* levelOrder.swift */,
+				26E7A90226E735BA007DE3B0 /* zigzagLevelOrder.swift */,
 			);
 			path = WSF;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				2694FAA326D8904100835C6D /* Solution_wrong_isValidSerialization.swift in Sources */,
 				26E0AE4026C94B1C00E697E5 /* maxProfit.swift in Sources */,
 				2659D19426D49E57000B1117 /* maxFreq.swift in Sources */,
+				26E7A90326E735BA007DE3B0 /* zigzagLevelOrder.swift in Sources */,
 				26E0AE3826C946C000E697E5 /* mergeTwoLists.swift in Sources */,
 				262B866C26E0D8C2009B6FA6 /* uniquePathsWithObstacles.swift in Sources */,
 				262B866426E0B462009B6FA6 /* arrayNesting.swift in Sources */,
