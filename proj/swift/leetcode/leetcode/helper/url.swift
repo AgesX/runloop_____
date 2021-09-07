@@ -78,6 +78,9 @@ extension Web{
         
         
         input = "Slowest Key"
+        
+        
+        input = "Orderly Queue"
         result = output(for: input)
         
         print(result)

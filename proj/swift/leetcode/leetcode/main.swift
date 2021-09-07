@@ -5,9 +5,35 @@
 import Foundation
 
 
+class Solution_orderlyQueue_copy {
+    func orderlyQueue(_ s: String, _ k: Int) -> String {
+        if k > 1{
+            let arr = (Array(s).sorted { lhs, rhs in
+                lhs.ascII_scalar < rhs.ascII_scalar
+            }).map { String($0) }
+            return arr.joined(separator: "")
+        }
+        else{
+            let cnt = s.count
+            guard cnt > 1 else {
+                return s
+            }
+            var i = 1
+            var result = s
+            while i < cnt {
+                let next = "\(s[i...])\(s[0..<i])"
+                if result.compare(next, options: .caseInsensitive) == .orderedDescending{
+                    result = next
+                }
+                i += 1
+            }
+            return result
+        }
+    }
+}
 
 
-class Solution {
+class Solution_orderlyQueue_wrong {
     func orderlyQueue(_ s: String, _ k: Int) -> String {
         let cnt = s.count
         guard cnt > 0, k > 0 else {
@@ -63,3 +89,7 @@ let result = Solution().orderlyQueue(s, k)
 
 
 print(result)
+
+
+
+//  899. Orderly Queue
