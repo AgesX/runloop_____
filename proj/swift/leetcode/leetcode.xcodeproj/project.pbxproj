@@ -45,6 +45,7 @@
 		26E0AE3926C946C000E697E5 /* deleteDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0AE3326C946C000E697E5 /* deleteDuplicates.swift */; };
 		26E0AE3E26C9477F00E697E5 /* invertTree_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0AE3D26C9477F00E697E5 /* invertTree_.swift */; };
 		26E0AE4026C94B1C00E697E5 /* maxProfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0AE3F26C94B1C00E697E5 /* maxProfit.swift */; };
+		26E7A8FA26E6FE82007DE3B0 /* slowestKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A8F926E6FE82007DE3B0 /* slowestKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -99,6 +100,7 @@
 		26E0AE3326C946C000E697E5 /* deleteDuplicates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = deleteDuplicates.swift; sourceTree = "<group>"; };
 		26E0AE3D26C9477F00E697E5 /* invertTree_.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = invertTree_.swift; sourceTree = "<group>"; };
 		26E0AE3F26C94B1C00E697E5 /* maxProfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maxProfit.swift; sourceTree = "<group>"; };
+		26E7A8F926E6FE82007DE3B0 /* slowestKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = slowestKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +303,7 @@
 				2659D19526D49E5F000B1117 /* false */,
 				26E0AE2C26C946C000E697E5 /* isPrefixString.swift */,
 				2659D19326D49E57000B1117 /* maxFreq.swift */,
+				26E7A8F926E6FE82007DE3B0 /* slowestKey.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				26AE907B26CF966200ED05F0 /* removeNthFromEnd.swift in Sources */,
 				2601DFC626D79D110093AA4D /* util_wrong.swift in Sources */,
 				268ABE6B26C52F3300E25548 /* main.swift in Sources */,
+				26E7A8FA26E6FE82007DE3B0 /* slowestKey.swift in Sources */,
 				26E0AE3626C946C000E697E5 /* sortedArrayToBST.swift in Sources */,
 				2694FAA026D8901300835C6D /* isValidSerialization.swift in Sources */,
 				26AE907726CF8A5F00ED05F0 /* maxProduct_sample.swift in Sources */,
