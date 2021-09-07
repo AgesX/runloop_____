@@ -52,6 +52,8 @@
 		26E7A90526E73B8E007DE3B0 /* levelOrderBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A90426E73B8E007DE3B0 /* levelOrderBottom.swift */; };
 		26E7A90726E73EA9007DE3B0 /* largestValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A90626E73EA9007DE3B0 /* largestValues.swift */; };
 		26E7A90926E74440007DE3B0 /* hasPathSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A90826E74440007DE3B0 /* hasPathSum.swift */; };
+		26E7A90B26E74B1B007DE3B0 /* pathSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A90A26E74B1B007DE3B0 /* pathSum.swift */; };
+		26E7A90D26E7536C007DE3B0 /* pathSum_third.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A90C26E7536C007DE3B0 /* pathSum_third.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -113,6 +115,8 @@
 		26E7A90426E73B8E007DE3B0 /* levelOrderBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = levelOrderBottom.swift; sourceTree = "<group>"; };
 		26E7A90626E73EA9007DE3B0 /* largestValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = largestValues.swift; sourceTree = "<group>"; };
 		26E7A90826E74440007DE3B0 /* hasPathSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hasPathSum.swift; sourceTree = "<group>"; };
+		26E7A90A26E74B1B007DE3B0 /* pathSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pathSum.swift; sourceTree = "<group>"; };
+		26E7A90C26E7536C007DE3B0 /* pathSum_third.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pathSum_third.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,8 @@
 			children = (
 				262B866126E06119009B6FA6 /* inorder.swift */,
 				26E7A90826E74440007DE3B0 /* hasPathSum.swift */,
+				26E7A90A26E74B1B007DE3B0 /* pathSum.swift */,
+				26E7A90C26E7536C007DE3B0 /* pathSum_third.swift */,
 			);
 			path = DF;
 			sourceTree = "<group>";
@@ -449,6 +455,7 @@
 				268ABE6B26C52F3300E25548 /* main.swift in Sources */,
 				26E7A8FD26E711AE007DE3B0 /* orderlyQueue.swift in Sources */,
 				26E7A8FA26E6FE82007DE3B0 /* slowestKey.swift in Sources */,
+				26E7A90B26E74B1B007DE3B0 /* pathSum.swift in Sources */,
 				26E0AE3626C946C000E697E5 /* sortedArrayToBST.swift in Sources */,
 				2694FAA026D8901300835C6D /* isValidSerialization.swift in Sources */,
 				26AE907726CF8A5F00ED05F0 /* maxProduct_sample.swift in Sources */,
@@ -458,6 +465,7 @@
 				269C4F6B26CBABCE0069205E /* struct.swift in Sources */,
 				269C4F6926CBA90C0069205E /* util.swift in Sources */,
 				26E0AE3526C946C000E697E5 /* isPrefixString.swift in Sources */,
+				26E7A90D26E7536C007DE3B0 /* pathSum_third.swift in Sources */,
 				26AE907926CF8B2400ED05F0 /* maxProduct.swift in Sources */,
 				269C4F7026CBAEFE0069205E /* url.swift in Sources */,
 				26D1D33A26E61499009921E8 /* uniquePathsIII.swift in Sources */,
