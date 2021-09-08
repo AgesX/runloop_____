@@ -3,6 +3,159 @@
 
 import Foundation
 
+class Solution_Time_Limit_three{
+    
+    // Time Limit
+    
+    
+    
+    func numIslands(_ grid: [[Character]]) -> Int {
+        let m = grid.count
+        guard m > 0 else {
+            return 0
+        }
+        let n = grid[0].count
+        guard n > 0 else {
+            return 0
+        }
+        var lands = Set<Pos>()
+        var i = 0
+        while i < m {
+            var j = 0
+            while j < n {
+                let cake = Pos(x: i, y: j)
+                if grid[i][j] == "1"{
+                    lands.insert(cake)
+                }
+                j += 1
+            }
+            i += 1
+        }
+        
+        
+        
+        var result = 0
+        
+        let haha = lands
+        while lands.isEmpty == false {
+            print(lands)
+            let begin = lands.removeFirst()
+            print(begin)
+            var queue = [begin]
+            while queue.isEmpty == false {
+                let first = queue.removeFirst()
+                if first.x > 0{
+                    let lhs = first.lhs
+                    if lands.contains(lhs), lhs.hitOne(in: grid){
+                        lands.remove(lhs)
+                        queue.append(lhs)
+                    }
+                }
+                if first.y > 0{
+                    let up = first.up
+                    if lands.contains(up), up.hitOne(in: grid){
+                        lands.remove(up)
+                        queue.append(up)
+                    }
+                }
+                if first.x < m - 1{
+                    let rhs = first.rhs
+                    if lands.contains(rhs), rhs.hitOne(in: grid){
+                        lands.remove(rhs)
+                        queue.append(rhs)
+                    }
+                }
+                if first.y < n - 1{
+                    let down = first.down
+                    if lands.contains(down), down.hitOne(in: grid){
+                        lands.remove(down)
+                        queue.append(down)
+                    }
+                }
+                print(111, lands.symmetricDifference(haha))
+            }
+            
+            result += 1
+        }
+        return result
+    }
+    
+}
+
+
+class Solution_Time_Limit_two{
+    
+    // Time Limit
+    
+    
+    
+    func numIslands(_ grid: [[Character]]) -> Int {
+        let m = grid.count
+        guard m > 0 else {
+            return 0
+        }
+        let n = grid[0].count
+        guard n > 0 else {
+            return 0
+        }
+        var lands = Set<Pos>()
+        for collect in grid.enumerated(){
+            for ele in collect.element.enumerated(){
+                let cake = Pos(x: collect.offset, y: ele.offset)
+                if ele.element == "1"{
+                    lands.insert(cake)
+                }
+            }
+        }
+        
+        
+        var result = 0
+        
+        let haha = lands
+        while lands.isEmpty == false {
+            print(lands)
+            let begin = lands.removeFirst()
+            print(begin)
+            var queue = [begin]
+            while queue.isEmpty == false {
+                let first = queue.removeFirst()
+                if first.x > 0{
+                    let lhs = first.lhs
+                    if lands.contains(lhs), lhs.hitOne(in: grid){
+                        lands.remove(lhs)
+                        queue.append(lhs)
+                    }
+                }
+                if first.y > 0{
+                    let up = first.up
+                    if lands.contains(up), up.hitOne(in: grid){
+                        lands.remove(up)
+                        queue.append(up)
+                    }
+                }
+                if first.x < m - 1{
+                    let rhs = first.rhs
+                    if lands.contains(rhs), rhs.hitOne(in: grid){
+                        lands.remove(rhs)
+                        queue.append(rhs)
+                    }
+                }
+                if first.y < n - 1{
+                    let down = first.down
+                    if lands.contains(down), down.hitOne(in: grid){
+                        lands.remove(down)
+                        queue.append(down)
+                    }
+                }
+                print(111, lands.symmetricDifference(haha))
+            }
+            
+            result += 1
+        }
+        return result
+    }
+    
+}
 
 
 class Solution_numIslands_Time_Limit {
@@ -107,7 +260,7 @@ grid = [["1","1","0","0","0"],
 ["0","0","0","1","1"]]
 
 
-let result = Solution_numIslands_Time_Limit().numIslands(grid)
+let result = Solution_Time_Limit_three().numIslands(grid)
 
 print(result)
 
