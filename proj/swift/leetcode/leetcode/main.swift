@@ -4,7 +4,42 @@
 import Foundation
 
 
-class Solution {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Solution_findMedianSortedArrays {
     func findMedianSortedArrays(_ nums1: [Int], _ nums2: [Int]) -> Double {
         let lhsCnt = nums1.count
         let rhsCnt = nums2.count
@@ -93,41 +128,63 @@ print("\n\n\n")
 
 
 
-var nums1 = [1,3], nums2 = [2]
-
-do{
-    nums1 = [1,2]
-    nums2 = [3,4]
-}
 
 
-do{
-    nums1 = [0,0]
-    nums2 = [0,0]
+
+
+
+
+
+
+extension Solution_findMedianSortedArrays{
+    
+    
+    func test(){
+        
+        
+        var nums1 = [1,3], nums2 = [2]
+
+        do{
+            nums1 = [1,2]
+            nums2 = [3,4]
+        }
+
+
+        do{
+            nums1 = [0,0]
+            nums2 = [0,0]
+            
+        }
+
+        do{
+            nums1 = [0,0,0,0,0]
+            nums2 = [-1,0,0,0,0,0,1]
+        }
+
+
+
+
+        do{
+            nums1 = [1,3]
+            nums2 = [2,7]
+        }
+
+
+
+
+
+
+
+
+        let result = Solution_findMedianSortedArrays().findMedianSortedArrays(nums1, nums2)
+
+
+        print(result)
+
+        
+        
+    }
     
 }
 
-do{
-    nums1 = [0,0,0,0,0]
-    nums2 = [-1,0,0,0,0,0,1]
-}
 
-
-
-
-do{
-    nums1 = [1,3]
-    nums2 = [2,7]
-}
-
-
-
-
-
-
-
-
-let result = Solution().findMedianSortedArrays(nums1, nums2)
-
-
-print(result)
