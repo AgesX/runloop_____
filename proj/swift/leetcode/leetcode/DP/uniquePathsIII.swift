@@ -9,25 +9,69 @@ import Foundation
 
 
 
+struct Pos: Hashable {
+    let x: Int
+    let y: Int
+}
+
+
+
+
+extension Pos{
+    
+    func check(in grid: [[Int]], _ visited: inout Set<Pos>) -> Bool{
+        var ok = true
+        if grid[x][y] == -1{
+            ok = false
+            visited.insert(self)
+        }
+        return ok && !( visited.contains(self) )
+    }
+}
+
+
+
+
+
+extension Pos{
+    
+    var lhs: Pos{
+        Pos(x: x - 1, y: y)
+    }
+    
+    var rhs: Pos{
+        Pos(x: x + 1, y: y)
+    }
+    
+    var up: Pos{
+        Pos(x: x, y: y - 1)
+    }
+    
+    var down: Pos{
+        Pos(x: x, y: y + 1)
+    }
+    
+}
+
+
+
+
+
+extension Pos{
+    
+    func hitOne(in grid: [[Character]]) -> Bool{
+        return grid[x][y] == "1"
+    }
+}
+
+
 
 
 
 class Solution_uniquePathsIII {
     
     
-    struct Pos: Hashable {
-        let x: Int
-        let y: Int
-        
-        func check(in grid: [[Int]], _ visited: inout Set<Pos>) -> Bool{
-            var ok = true
-            if grid[x][y] == -1{
-                ok = false
-                visited.insert(self)
-            }
-            return ok && !( visited.contains(self) )
-        }
-    }
+    
     
     
     func uniquePathsIII(_ grid: [[Int]]) -> Int {

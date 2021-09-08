@@ -15,6 +15,8 @@
 		262B866A26E0CAF8009B6FA6 /* uniquePaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B866926E0CAF8009B6FA6 /* uniquePaths.swift */; };
 		262B866C26E0D8C2009B6FA6 /* uniquePathsWithObstacles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B866B26E0D8C2009B6FA6 /* uniquePathsWithObstacles.swift */; };
 		26507D3626E84F4E00148948 /* connect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26507D3526E84F4E00148948 /* connect.swift */; };
+		26507D3826E8564C00148948 /* rightSideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26507D3726E8564C00148948 /* rightSideView.swift */; };
+		26507D3B26E8570000148948 /* numIslands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26507D3A26E8570000148948 /* numIslands.swift */; };
 		2659D19426D49E57000B1117 /* maxFreq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2659D19326D49E57000B1117 /* maxFreq.swift */; };
 		2659D19726D49E5F000B1117 /* maxFreq_wrong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2659D19626D49E5F000B1117 /* maxFreq_wrong.swift */; };
 		2659D19A26D4A278000B1117 /* findTarget_false.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2659D19926D4A278000B1117 /* findTarget_false.swift */; };
@@ -79,6 +81,8 @@
 		262B866926E0CAF8009B6FA6 /* uniquePaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uniquePaths.swift; sourceTree = "<group>"; };
 		262B866B26E0D8C2009B6FA6 /* uniquePathsWithObstacles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uniquePathsWithObstacles.swift; sourceTree = "<group>"; };
 		26507D3526E84F4E00148948 /* connect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connect.swift; sourceTree = "<group>"; };
+		26507D3726E8564C00148948 /* rightSideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rightSideView.swift; sourceTree = "<group>"; };
+		26507D3A26E8570000148948 /* numIslands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numIslands.swift; sourceTree = "<group>"; };
 		2659D19326D49E57000B1117 /* maxFreq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maxFreq.swift; sourceTree = "<group>"; };
 		2659D19626D49E5F000B1117 /* maxFreq_wrong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = maxFreq_wrong.swift; sourceTree = "<group>"; };
 		2659D19926D4A278000B1117 /* findTarget_false.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findTarget_false.swift; sourceTree = "<group>"; };
@@ -163,6 +167,14 @@
 			path = DP;
 			sourceTree = "<group>";
 		};
+		26507D3926E856E500148948 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				26507D3A26E8570000148948 /* numIslands.swift */,
+			);
+			path = map;
+			sourceTree = "<group>";
+		};
 		2659D19526D49E5F000B1117 /* false */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +226,7 @@
 				269C4F6E26CBAEF10069205E /* helper */,
 				26E0AE3126C946C000E697E5 /* ListNode */,
 				268ABE6A26C52F3300E25548 /* main.swift */,
+				26507D3926E856E500148948 /* map */,
 				2694463E26D5D3EC00A23D5D /* math */,
 				269C4F6726CBA8F10069205E /* meta */,
 				26E7A8FB26E71199007DE3B0 /* Queue */,
@@ -394,6 +407,7 @@
 				26E7A90426E73B8E007DE3B0 /* levelOrderBottom.swift */,
 				26E7A90626E73EA9007DE3B0 /* largestValues.swift */,
 				26507D3526E84F4E00148948 /* connect.swift */,
+				26507D3726E8564C00148948 /* rightSideView.swift */,
 			);
 			path = BF;
 			sourceTree = "<group>";
@@ -465,6 +479,7 @@
 				26E0AE3626C946C000E697E5 /* sortedArrayToBST.swift in Sources */,
 				2694FAA026D8901300835C6D /* isValidSerialization.swift in Sources */,
 				26AE907726CF8A5F00ED05F0 /* maxProduct_sample.swift in Sources */,
+				26507D3B26E8570000148948 /* numIslands.swift in Sources */,
 				26E0AE3926C946C000E697E5 /* deleteDuplicates.swift in Sources */,
 				26E7A90126E714BF007DE3B0 /* levelOrder.swift in Sources */,
 				26E0AE3E26C9477F00E697E5 /* invertTree_.swift in Sources */,
@@ -475,6 +490,7 @@
 				26AE907926CF8B2400ED05F0 /* maxProduct.swift in Sources */,
 				269C4F7026CBAEFE0069205E /* url.swift in Sources */,
 				26507D3626E84F4E00148948 /* connect.swift in Sources */,
+				26507D3826E8564C00148948 /* rightSideView.swift in Sources */,
 				26D1D33A26E61499009921E8 /* uniquePathsIII.swift in Sources */,
 				269C4F6D26CBAC390069205E /* goodNodes.swift in Sources */,
 				26E0AE3726C946C000E697E5 /* searchInsert.swift in Sources */,

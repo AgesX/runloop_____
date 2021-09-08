@@ -5,66 +5,111 @@ import Foundation
 
 
 
-
-
-
-
-class Solution {
-    func rightSideView(_ root: TreeNode?) -> [Int] {
-        guard let n = root else {
-            return []
+class Solution_numIslands_Time_Limit {
+    
+    // Time Limit
+    
+    
+    
+    func numIslands(_ grid: [[Character]]) -> Int {
+        let m = grid.count
+        guard m > 0 else {
+            return 0
         }
-        var result = [Int]()
-        var levelQ = [n]
-        while levelQ.isEmpty == false {
-            var nextQ = [TreeNode]()
-            if let last = levelQ.last{
-                result.append(last.val)
-            }
-            while levelQ.isEmpty == false {
-                let first = levelQ.removeFirst()
-                if let lhs = first.left{
-                    nextQ.append(lhs)
-                }
-                if let rhs = first.right{
-                    nextQ.append(rhs)
-                }
-            }
-            levelQ = nextQ
+        let n = grid[0].count
+        guard n > 0 else {
+            return 0
         }
+        var hasVisited = Set<Pos>()
+        var begin: Pos?
+        var result = 0
+        repeat{
+            begin = nil
+            Outer: for collect in grid.enumerated(){
+                for ele in collect.element.enumerated(){
+                    let cake = Pos(x: collect.offset, y: ele.offset)
+                    if hasVisited.contains(cake) == false, ele.element == "1"{
+                        begin = cake
+                        result += 1
+                        break Outer
+                    }
+                }
+            }
+            guard let start = begin else{
+                return result
+            }
+            var queue = [start]
+            hasVisited.insert(start)
+            while queue.isEmpty == false {
+                let first = queue.removeFirst()
+                if first.x > 0{
+                    let lhs = first.lhs
+                    if lhs.hitOne(in: grid), hasVisited.contains(lhs) == false{
+                        hasVisited.insert(lhs)
+                        queue.append(lhs)
+                    }
+                }
+                if first.y > 0{
+                    let up = first.up
+                    if up.hitOne(in: grid), hasVisited.contains(up) == false{
+                        hasVisited.insert(up)
+                        queue.append(up)
+                    }
+                }
+                if first.x < m - 1{
+                    let rhs = first.rhs
+                    if rhs.hitOne(in: grid), hasVisited.contains(rhs) == false{
+                        hasVisited.insert(rhs)
+                        queue.append(rhs)
+                    }
+                }
+                if first.y < n - 1{
+                    let down = first.down
+                    if down.hitOne(in: grid), hasVisited.contains(down) == false{
+                        hasVisited.insert(down)
+                        queue.append(down)
+                    }
+                }
+            }
+        }while ( begin != nil )
         return result
     }
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 
 
 
-let arr: [Int?] = [1,2,3,null,5,null,4]
 
 
-let result = Solution().rightSideView(arr.arrayDenseToNode())
+
+
+
+
+
+
+var grid: [[Character]] = [["1","1","1","1","0"],
+            ["1","1","0","1","0"],
+            ["1","1","0","0","0"],
+            ["0","0","0","0","0"]]
+
+
+grid = [["1","1","0","0","0"],
+["1","1","0","0","0"],
+["0","0","1","0","0"],
+["0","0","0","1","1"]]
+
+
+let result = Solution_numIslands_Time_Limit().numIslands(grid)
 
 print(result)
-
-
-
-
-
-//  199. Binary Tree Right Side View
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
