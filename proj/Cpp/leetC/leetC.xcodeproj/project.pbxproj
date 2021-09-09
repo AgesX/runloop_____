@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		262B866726E0BDC8009B6FA6 /* maxProfit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 262B866526E0BDC8009B6FA6 /* maxProfit.cpp */; };
 		26E0AE4E26C94CA000E697E5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26E0AE4D26C94CA000E697E5 /* main.cpp */; };
+		26F0627F26E9E15C00ED59C7 /* try_effect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26F0627D26E9E15C00ED59C7 /* try_effect.cpp */; };
+		26F0628426E9E3F800ED59C7 /* maxProfit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26F0628226E9E3F800ED59C7 /* maxProfit.cpp */; };
+		26F0628726E9E40900ED59C7 /* shiftingLetters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26F0628526E9E40900ED59C7 /* shiftingLetters.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,10 +26,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		262B866526E0BDC8009B6FA6 /* maxProfit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = maxProfit.cpp; sourceTree = "<group>"; };
-		262B866626E0BDC8009B6FA6 /* maxProfit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = maxProfit.hpp; sourceTree = "<group>"; };
 		26E0AE4A26C94CA000E697E5 /* leetC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leetC; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E0AE4D26C94CA000E697E5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		26F0627D26E9E15C00ED59C7 /* try_effect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = try_effect.cpp; sourceTree = "<group>"; };
+		26F0627E26E9E15C00ED59C7 /* try_effect.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = try_effect.hpp; sourceTree = "<group>"; };
+		26F0628126E9E3F800ED59C7 /* maxProfit.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = maxProfit.hpp; sourceTree = "<group>"; };
+		26F0628226E9E3F800ED59C7 /* maxProfit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = maxProfit.cpp; sourceTree = "<group>"; };
+		26F0628526E9E40900ED59C7 /* shiftingLetters.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shiftingLetters.cpp; sourceTree = "<group>"; };
+		26F0628626E9E40900ED59C7 /* shiftingLetters.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = shiftingLetters.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +66,39 @@
 		26E0AE4C26C94CA000E697E5 /* leetC */ = {
 			isa = PBXGroup;
 			children = (
+				26F0628026E9E3F800ED59C7 /* dy */,
+				26F0628326E9E3F800ED59C7 /* string */,
+				26F0627C26E9E14900ED59C7 /* test */,
 				26E0AE4D26C94CA000E697E5 /* main.cpp */,
-				262B866526E0BDC8009B6FA6 /* maxProfit.cpp */,
-				262B866626E0BDC8009B6FA6 /* maxProfit.hpp */,
 			);
 			path = leetC;
+			sourceTree = "<group>";
+		};
+		26F0627C26E9E14900ED59C7 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				26F0627D26E9E15C00ED59C7 /* try_effect.cpp */,
+				26F0627E26E9E15C00ED59C7 /* try_effect.hpp */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		26F0628026E9E3F800ED59C7 /* dy */ = {
+			isa = PBXGroup;
+			children = (
+				26F0628126E9E3F800ED59C7 /* maxProfit.hpp */,
+				26F0628226E9E3F800ED59C7 /* maxProfit.cpp */,
+			);
+			path = dy;
+			sourceTree = "<group>";
+		};
+		26F0628326E9E3F800ED59C7 /* string */ = {
+			isa = PBXGroup;
+			children = (
+				26F0628526E9E40900ED59C7 /* shiftingLetters.cpp */,
+				26F0628626E9E40900ED59C7 /* shiftingLetters.hpp */,
+			);
+			path = string;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,8 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				262B866726E0BDC8009B6FA6 /* maxProfit.cpp in Sources */,
+				26F0627F26E9E15C00ED59C7 /* try_effect.cpp in Sources */,
+				26F0628426E9E3F800ED59C7 /* maxProfit.cpp in Sources */,
 				26E0AE4E26C94CA000E697E5 /* main.cpp in Sources */,
+				26F0628726E9E40900ED59C7 /* shiftingLetters.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
