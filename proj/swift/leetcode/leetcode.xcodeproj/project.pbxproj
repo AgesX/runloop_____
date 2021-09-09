@@ -59,6 +59,7 @@
 		26E7A90B26E74B1B007DE3B0 /* pathSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A90A26E74B1B007DE3B0 /* pathSum.swift */; };
 		26E7A90D26E7536C007DE3B0 /* pathSum_third.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A90C26E7536C007DE3B0 /* pathSum_third.swift */; };
 		26E7A90F26E75980007DE3B0 /* reverseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7A90E26E75980007DE3B0 /* reverseList.swift */; };
+		26F0627626E9C0CD00ED59C7 /* isValidBST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0627526E9C0CD00ED59C7 /* isValidBST.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -127,6 +128,7 @@
 		26E7A90A26E74B1B007DE3B0 /* pathSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pathSum.swift; sourceTree = "<group>"; };
 		26E7A90C26E7536C007DE3B0 /* pathSum_third.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pathSum_third.swift; sourceTree = "<group>"; };
 		26E7A90E26E75980007DE3B0 /* reverseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reverseList.swift; sourceTree = "<group>"; };
+		26F0627526E9C0CD00ED59C7 /* isValidBST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isValidBST.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				26E7A90826E74440007DE3B0 /* hasPathSum.swift */,
 				26E7A90A26E74B1B007DE3B0 /* pathSum.swift */,
 				26E7A90C26E7536C007DE3B0 /* pathSum_third.swift */,
+				26F0627526E9C0CD00ED59C7 /* isValidBST.swift */,
 			);
 			path = DF;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				26AE907726CF8A5F00ED05F0 /* maxProduct_sample.swift in Sources */,
 				26507D3B26E8570000148948 /* numIslands.swift in Sources */,
 				26E0AE3926C946C000E697E5 /* deleteDuplicates.swift in Sources */,
+				26F0627626E9C0CD00ED59C7 /* isValidBST.swift in Sources */,
 				26E7A90126E714BF007DE3B0 /* levelOrder.swift in Sources */,
 				26E0AE3E26C9477F00E697E5 /* invertTree_.swift in Sources */,
 				269C4F6B26CBABCE0069205E /* struct.swift in Sources */,
