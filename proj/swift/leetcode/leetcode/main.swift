@@ -11,12 +11,73 @@ import Foundation
 
 
 
+class Solution {
+    func orderOfLargestPlusSign(_ n: Int, _ mines: [[Int]]) -> Int {
+        let cnt = mines.count
+        guard cnt > 2 else {
+            return 0
+        }
+        let half = cnt / 2
+        let even = (cnt % 2 == 0)
+        var edgeMax = half
+        if even{
+            edgeMax = half - 1
+        }
+        if even{
+            var i = 0
+            while i < half {
+                var j = 0
+                while j < half {
+                    var k = 0
+                    while k < half {
+                        
+                        k += 1
+                    }
+                    j += 1
+                }
+                i += 1
+            }
+            
+        }
+        else{
+            
+            
+        }
+        
+        
+        
+        
+        
+        
+        return 1
+        
+    }
+}
 
 
+let half = 3
 
+let cnt = half * 2
+var arr = [[Int]](repeating: [Int](repeating: 0, count: cnt), count: cnt)
 
+// 访问方式，调整
 
-
+var i = 0
+while i < half {
+    var j = 0
+    while j <= i{
+        arr[half - j - 1][half - j - 1] = 1
+        arr[half - j - 1][half - j] = 1
+        arr[half - j][half - j] = 1
+        arr[half - j][half - j - 1] = 1
+        
+        
+        j += 1
+    }
+    arr.forEach {  print($0)    }
+    print("\n")
+    i += 1
+}
 
 
 
