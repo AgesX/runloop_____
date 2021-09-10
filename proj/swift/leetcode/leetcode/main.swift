@@ -62,32 +62,21 @@ var arr = [[Int]](repeating: [Int](repeating: 0, count: cnt), count: cnt)
 
 // 访问方式，调整
 
-var i = 0
-while i < 1 {
+
     var j = 0
     while j < half{
-        var k = 0
-        while k <= j{
-            let top = half - k - 1
-            let hip = half + k
-            let lhs = half - k - 1
-            let rhs = half + k
+        var hip = half - j - 1
+        while hip <= half + j{
             let lhsSolid = half - j - 1
-            let topSolid = half - j - 1
-            let hipSolid = half + j
-            arr[top][lhsSolid] = 1  // top lhs  increase
-            arr[hip][lhsSolid] = 1  //
-            arr[topSolid][lhs] = 1  // top lhs  increase
-            arr[hipSolid][lhs] = 1  //
-            k += 1
+     
+            arr[hip][lhsSolid] = 1  // top lhs  increase
+   
+            hip += 1
         }
         j += 1
         arr.forEach {  print($0)    }
         print("\n")
     }
-    
-    i += 1
-}
 
 
 
