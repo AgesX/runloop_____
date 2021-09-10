@@ -63,23 +63,31 @@ var arr = [[Int]](repeating: [Int](repeating: 0, count: cnt), count: cnt)
 // 访问方式，调整
 
 var i = 0
-while i < half {
+while i < 1 {
     var j = 0
     while j < half{
         var k = 0
+        while k <= j{
+            let lhs = half - k - 1
+            let rhs = half + k
+            let top = half - j - 1
+            arr[lhs][top] = 1
+        //    arr[lhs][rhs] = 1
+            k += 1
+        }
+        k = 0
         while k < half{
-            let lhsTop = half - k - 1 //+ j
-            let rhsHip = half + k// + j
-            arr[lhsTop][lhsTop] = 1
-            arr[lhsTop][rhsHip] = 1
-            arr[rhsHip][lhsTop] = 1
-            arr[rhsHip][rhsHip] = 1
+            let lhsTop = half - k - 1
+            let rhsHip = half + k
+         //  arr[rhsHip][lhsTop] = 1
+         //   arr[rhsHip][rhsHip] = 1
             k += 1
         }
         j += 1
+        arr.forEach {  print($0)    }
+        print("\n")
     }
-    arr.forEach {  print($0)    }
-    print("\n")
+    
     i += 1
 }
 
