@@ -55,7 +55,7 @@ class Solution {
 }
 
 
-let half = 3
+let half = 4
 
 let cnt = half * 2
 var arr = [[Int]](repeating: [Int](repeating: 0, count: cnt), count: cnt)
@@ -63,20 +63,22 @@ var arr = [[Int]](repeating: [Int](repeating: 0, count: cnt), count: cnt)
 // 访问方式，调整
 
 
-    var j = 0
-    while j < half{
-        var hip = half - j - 1
-        while hip <= half + j{
-            let lhsSolid = half - j - 1
-     
-            arr[hip][lhsSolid] = 1  // top lhs  increase
-   
-            hip += 1
-        }
-        j += 1
-        arr.forEach {  print($0)    }
-        print("\n")
+var j = 0
+while j < half{
+    var hip = half - j - 1
+    while hip <= half + j{
+        let lhsSolid = half - j - 1
+        let rhsSolid = half + j
+        arr[hip][lhsSolid] = 1  // hip  lhs  increase
+        arr[hip][rhsSolid] = 1  // hip  rhs  increase
+        arr[lhsSolid][hip] = 1
+        arr[rhsSolid][hip] = 1
+        hip += 1
     }
+    j += 1
+    arr.forEach {  print($0)    }
+    print("\n")
+}
 
 
 
