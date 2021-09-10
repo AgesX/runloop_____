@@ -55,7 +55,7 @@ class Solution {
 }
 
 
-let half = 3
+let half = 2
 
 let cnt = half * 2
 var arr = [[Int]](repeating: [Int](repeating: 0, count: cnt), count: cnt)
@@ -65,13 +65,17 @@ var arr = [[Int]](repeating: [Int](repeating: 0, count: cnt), count: cnt)
 var i = 0
 while i < half {
     var j = 0
-    while j <= i{
-        arr[half - j - 1][half - j - 1] = 1
-        arr[half - j - 1][half - j] = 1
-        arr[half - j][half - j] = 1
-        arr[half - j][half - j - 1] = 1
-        
-        
+    while j < half{
+        var k = 0
+        while k < half{
+            let lhsTop = half - k - 1 //+ j
+            let rhsHip = half + k// + j
+            arr[lhsTop][lhsTop] = 1
+            arr[lhsTop][rhsHip] = 1
+            arr[rhsHip][lhsTop] = 1
+            arr[rhsHip][rhsHip] = 1
+            k += 1
+        }
         j += 1
     }
     arr.forEach {  print($0)    }
