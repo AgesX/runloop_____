@@ -8,10 +8,7 @@ import Foundation
 
 
 
-
-
-
-class Solution_orderOfLargestPlusSign_time_limit {
+class Solution{
     
     // mines , 地雷
     func orderOfLargestPlusSign(_ n: Int, _ mines: [[Int]]) -> Int {
@@ -47,12 +44,24 @@ class Solution_orderOfLargestPlusSign_time_limit {
                     let rhsHip = [hip, rhsSolid]
                     let lhsTop = [lhsSolid, hip]
                     let rhsTop = [rhsSolid, hip]
-                    print(rhsHip)
-                    result = max(check(lhsHip, in: mines, from: edgeMax, within: n), result)
-                    result = max(check(rhsHip, in: mines, from: edgeMax, within: n), result)
-                    result = max(check(lhsTop, in: mines, from: edgeMax, within: n), result)
-                    result = max(check(rhsTop, in: mines, from: edgeMax, within: n), result)
                     
+                    result = max(check(lhsHip, in: mines, from: edgeMax, within: n), result)
+                    if result >= edgeMax{
+                        return result
+                    }
+                    
+                    result = max(check(rhsHip, in: mines, from: edgeMax, within: n), result)
+                    if result >= edgeMax{
+                        return result
+                    }
+                    result = max(check(lhsTop, in: mines, from: edgeMax, within: n), result)
+                    if result >= edgeMax{
+                        return result
+                    }
+                    result = max(check(rhsTop, in: mines, from: edgeMax, within: n), result)
+                    if result >= edgeMax{
+                        return result
+                    }
                     hip += 1
                 }
                 j += 1
@@ -101,21 +110,6 @@ class Solution_orderOfLargestPlusSign_time_limit {
         return result
     }
 }
-
-
-
-
-
-var n = 5, mines = [[4,2]]
-
-
-n = 2
-mines = [[0,0],[0,1],[1,0]]
-
-let result = Solution_orderOfLargestPlusSign_time_limit().orderOfLargestPlusSign(n, mines)
-
-print(result)
-
 
 
 
@@ -220,27 +214,6 @@ print("\n\n\n")
 
 
 
-let blackList = [[0,1],[0,2],[1,0],[1,2],[1,4],[2,0],[2,2],[3,0],[3,1],[4,0],[4,1],[4,3],[4,4]]
-
-let nn = 5
-var info = [[Int]](repeating: [Int](repeating: 1, count: nn), count: nn)
-
-var i = 0
-
-while i < nn{
-    var j = 0
-    while j < nn{
-        if blackList.contains([i, j]){
-            info[i][j] = 0
-        }
-        j += 1
-    }
-    i += 1
-}
-
-
-
-info.forEach { print($0) }
 
 
 
