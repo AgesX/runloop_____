@@ -38,7 +38,7 @@ extension Array where Element == [Int]{
 
 func case_test_odd(){
  
-    var half = 1
+    var half = 2
     let n = half * 2 + 1
     var info = [[Int]](repeating: [Int](repeating: 0, count: n), count: n)
 
