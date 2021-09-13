@@ -36,7 +36,35 @@ extension Array where Element == [Int]{
 
 
 
+func case_test_odd(){
+ 
+    var half = 1
+    let n = half * 2 + 1
+    var info = [[Int]](repeating: [Int](repeating: 0, count: n), count: n)
 
+
+    var j = 0
+    while j < half{
+        var hip = half - j - 1
+        while hip <= half + j + 1{
+            let lhsSolid = half - j - 1
+            let rhsSolid = half + j + 1
+            let lhsHip = [hip, lhsSolid]
+            let rhsHip = [hip, rhsSolid]
+            let lhsTop = [lhsSolid, hip]
+            let rhsTop = [rhsSolid, hip]
+            info[at: lhsHip] += 1
+            info[at: rhsHip] += 1
+            info[at: lhsTop] += 1
+            info[at: rhsTop] += 1
+            hip += 1
+        }
+        
+        j += 1
+        print(info.info)
+    }
+
+}
 
 
 
@@ -58,10 +86,10 @@ func case_test_even(){
             let rhsHip = [hip, rhsSolid]
             let lhsTop = [lhsSolid, hip]
             let rhsTop = [rhsSolid, hip]
-            info[at: lhsHip] = 1
-            info[at: rhsHip] = 1
-            info[at: lhsTop] = 1
-            info[at: rhsTop] = 1
+            info[at: lhsHip] += 1
+            info[at: rhsHip] += 1
+            info[at: lhsTop] += 1
+            info[at: rhsTop] += 1
             hip += 1
         }
         
