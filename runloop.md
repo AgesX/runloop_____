@@ -36,5 +36,30 @@ runloop，
 
 
 
+<hr>
+
+<hr>
 
 
+run loop 线程保活
+
+debug 方便
+
+name it
+
+
+
+
+
+
+
+<hr>
+
+
+
+<hr>
+
+
+runloop 
+
+子线程，开计时器
