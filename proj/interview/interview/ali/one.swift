@@ -8,7 +8,12 @@
 import Foundation
 
 
-
+func reverseWordsX(in s: String) -> String{
+    return s.components(separatedBy: " ").map { str in
+        String(str.reversed())
+    }.joined(separator: " ")
+    
+}
 
 
 func reverseWords(in line: String) -> String{
@@ -72,11 +77,15 @@ func test(){
 
 
     test = "    hello   world"
+    test = "Let's take LeetCode contest"
 
-
+    test = "God Ding"
     let result = reverseWords(in: test)
-
-    print(result)
+    
+    
+    var target = "s'teL ekat edoCteeL tsetnoc"
+    target = "doG gniD"
+    print(result == target)
 
 
 }
