@@ -12,6 +12,7 @@
 		26DEC89727140AFE00F6F3C6 /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEC89627140AFE00F6F3C6 /* util.swift */; };
 		26DEC89A27140E1600F6F3C6 /* diameterOfBinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEC89927140E1600F6F3C6 /* diameterOfBinaryTree.swift */; };
 		26DEC89D27140E9A00F6F3C6 /* diameterOfBinaryTree_xxx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEC89C27140E9A00F6F3C6 /* diameterOfBinaryTree_xxx.swift */; };
+		26DEC8A02714258D00F6F3C6 /* ZigZag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEC89F2714258D00F6F3C6 /* ZigZag.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		26DEC89627140AFE00F6F3C6 /* util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = util.swift; sourceTree = "<group>"; };
 		26DEC89927140E1600F6F3C6 /* diameterOfBinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diameterOfBinaryTree.swift; sourceTree = "<group>"; };
 		26DEC89C27140E9A00F6F3C6 /* diameterOfBinaryTree_xxx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diameterOfBinaryTree_xxx.swift; sourceTree = "<group>"; };
+		26DEC89F2714258D00F6F3C6 /* ZigZag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZigZag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 		26DEC88A2713CA3C00F6F3C6 /* interview */ = {
 			isa = PBXGroup;
 			children = (
+				26DEC89E2714257F00F6F3C6 /* string */,
 				26DEC89827140E0A00F6F3C6 /* tree */,
 				26DEC89527140AFE00F6F3C6 /* util */,
 				26DEC8922713E54700F6F3C6 /* ali */,
@@ -104,6 +107,14 @@
 				26DEC89C27140E9A00F6F3C6 /* diameterOfBinaryTree_xxx.swift */,
 			);
 			path = gg;
+			sourceTree = "<group>";
+		};
+		26DEC89E2714257F00F6F3C6 /* string */ = {
+			isa = PBXGroup;
+			children = (
+				26DEC89F2714258D00F6F3C6 /* ZigZag.swift */,
+			);
+			path = string;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +178,7 @@
 				26DEC89727140AFE00F6F3C6 /* util.swift in Sources */,
 				26DEC89D27140E9A00F6F3C6 /* diameterOfBinaryTree_xxx.swift in Sources */,
 				26DEC8942713E55500F6F3C6 /* one.swift in Sources */,
+				26DEC8A02714258D00F6F3C6 /* ZigZag.swift in Sources */,
 				26DEC89A27140E1600F6F3C6 /* diameterOfBinaryTree.swift in Sources */,
 				26DEC88C2713CA3C00F6F3C6 /* main.swift in Sources */,
 			);
