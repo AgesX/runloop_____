@@ -27,12 +27,7 @@ class Solution {
             case (numRows - 1):
                 i = row
             default:
-                result.append(s[s.index(start, offsetBy: row)])
-                i = distance
-                let offset = distance - row
-                if offset < cnt, distance >= cnt{
-                    result.append(s[s.index(start, offsetBy: offset)])
-                }
+                i = numRows - 1
             }
             while i < cnt{
                 switch row{
@@ -55,6 +50,17 @@ class Solution {
                     i += distance
                 }
                 // print(result)
+            }
+            if row > 0, row < (numRows - 1){
+                let lhs = i - row
+                let rhs = i + row
+                if lhs < cnt{
+                    result.append(s[s.index(start, offsetBy: lhs)])
+                }
+                if rhs < cnt{
+                    result.append(s[s.index(start, offsetBy: rhs)])
+                }
+                i += distance
             }
             row += 1
         }
