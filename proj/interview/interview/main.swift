@@ -29,6 +29,10 @@ class Solution {
             default:
                 result.append(s[s.index(start, offsetBy: row)])
                 i = distance
+                let offset = distance - row
+                if offset < cnt, distance >= cnt{
+                    result.append(s[s.index(start, offsetBy: offset)])
+                }
             }
             while i < cnt{
                 switch row{
@@ -61,7 +65,15 @@ class Solution {
 
 var s = "PAYPALISHIRING", numRows = 3
 // s = "PAYPA"
-let result = Solution().convert(s, numRows)
+
 
 // print(result)
+
+// s = "ABCD"
+// numRows = 3
+
+let result = Solution().convert(s, numRows)
+
+print(result)
+
 print(result == "PAHNAPLSIIGYIR")
