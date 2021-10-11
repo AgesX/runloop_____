@@ -15,6 +15,7 @@ import Foundation
 
 // 543. Diameter of Binary Tree
 
+class diameterOfBinaryTree{
 class Solution {
     
     
@@ -95,3 +96,6 @@ func user_case(){
 
  
 */
+
+
+}
