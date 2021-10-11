@@ -14,7 +14,7 @@ class Solution {
         var result = ""
         var row = 0
         let cnt = s.count
-        guard cnt > numRows else{
+        guard cnt > numRows, numRows > 1 else{
             return result
         }
         let start = s.startIndex
@@ -27,8 +27,8 @@ class Solution {
             case (numRows - 1):
                 i = row
             default:
-                i = numRows - 1
-                result.append(s[s.index(start, offsetBy: i)])
+                result.append(s[s.index(start, offsetBy: row)])
+                i = distance
             }
             while i < cnt{
                 switch row{
@@ -39,7 +39,7 @@ class Solution {
                     result.append(s[s.index(start, offsetBy: i)])
                     i += distance
                 default:
-                    i += distance
+                    // print("hah", i)
                     let lhs = i - row
                     let rhs = i + row
                     if lhs < cnt{
@@ -48,7 +48,9 @@ class Solution {
                     if rhs < cnt{
                         result.append(s[s.index(start, offsetBy: rhs)])
                     }
+                    i += distance
                 }
+                // print(result)
             }
             row += 1
         }
@@ -57,4 +59,9 @@ class Solution {
 }
 
 
+var s = "PAYPALISHIRING", numRows = 3
+// s = "PAYPA"
+let result = Solution().convert(s, numRows)
 
+// print(result)
+print(result == "PAHNAPLSIIGYIR")
