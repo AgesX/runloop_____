@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+// 1190. Reverse Substrings Between Each Pair of Parentheses
 
 class Solution {
     func reverseParentheses(_ s: String) -> String {
@@ -28,7 +28,7 @@ class Solution {
                     bracketIndex.removeLast()
                     result[at: i] = ""
                     result[at: start] = ""
-                    if i - start > 0{
+                    if i - start > 1{
                         let from = result.index(begin, offsetBy: start)
                         let to = result.index(begin, offsetBy: i - 2)
                         let tmp = String(result[from...to])
@@ -51,6 +51,8 @@ class Solution {
 var testTwo = "(abcd)"
 testTwo = "(u(love)i)"
 testTwo = "(ed(et(oc))el)"
+testTwo = "vdgzyj()"
+
 
 var result = Solution().reverseParentheses(testTwo)
 
