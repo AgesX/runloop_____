@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26B3F94E2718357600113A58 /* reverseParentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B3F94D2718357600113A58 /* reverseParentheses.swift */; };
 		26DEC88C2713CA3C00F6F3C6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEC88B2713CA3C00F6F3C6 /* main.swift */; };
 		26DEC8942713E55500F6F3C6 /* one.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEC8932713E55500F6F3C6 /* one.swift */; };
 		26DEC89727140AFE00F6F3C6 /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEC89627140AFE00F6F3C6 /* util.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		26B3F94D2718357600113A58 /* reverseParentheses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reverseParentheses.swift; sourceTree = "<group>"; };
 		26DEC8882713CA3C00F6F3C6 /* interview */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = interview; sourceTree = BUILT_PRODUCTS_DIR; };
 		26DEC88B2713CA3C00F6F3C6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		26DEC8932713E55500F6F3C6 /* one.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = one.swift; sourceTree = "<group>"; };
@@ -50,6 +52,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26B3F94C2718354A00113A58 /* greedy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = greedy;
+			sourceTree = "<group>";
+		};
 		26DEC87F2713CA3C00F6F3C6 = {
 			isa = PBXGroup;
 			children = (
@@ -69,11 +78,12 @@
 		26DEC88A2713CA3C00F6F3C6 /* interview */ = {
 			isa = PBXGroup;
 			children = (
+				26DEC8922713E54700F6F3C6 /* ali */,
+				26B3F94C2718354A00113A58 /* greedy */,
+				26DEC88B2713CA3C00F6F3C6 /* main.swift */,
 				26DEC89E2714257F00F6F3C6 /* string */,
 				26DEC89827140E0A00F6F3C6 /* tree */,
 				26DEC89527140AFE00F6F3C6 /* util */,
-				26DEC8922713E54700F6F3C6 /* ali */,
-				26DEC88B2713CA3C00F6F3C6 /* main.swift */,
 			);
 			path = interview;
 			sourceTree = "<group>";
@@ -116,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				26DEC89F2714258D00F6F3C6 /* ZigZag.swift */,
+				26B3F94D2718357600113A58 /* reverseParentheses.swift */,
 			);
 			path = string;
 			sourceTree = "<group>";
@@ -179,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26DEC89727140AFE00F6F3C6 /* util.swift in Sources */,
+				26B3F94E2718357600113A58 /* reverseParentheses.swift in Sources */,
 				26DEC89D27140E9A00F6F3C6 /* diameterOfBinaryTree_xxx.swift in Sources */,
 				26DEC8942713E55500F6F3C6 /* one.swift in Sources */,
 				26DEC8A02714258D00F6F3C6 /* ZigZag.swift in Sources */,

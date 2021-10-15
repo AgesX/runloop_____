@@ -7,54 +7,48 @@
 
 import Foundation
 
-// 1190. Reverse Substrings Between Each Pair of Parentheses
+// 11. Container With Most Water
+
 
 class Solution {
-    func reverseParentheses(_ s: String) -> String {
-        let cnt = s.count
-        guard cnt > 0 else{ return s }
-        var result = s
-        var bracketIndex = [Int]()
-        var i = 0
-        let begin = result.startIndex
-        while i < result.count{
-            switch result[at: i]{
-            case "(":
-                bracketIndex.append(i)
-                i += 1
-            case ")":
-                // print(result, i)
-                if let start = bracketIndex.last{
-                    bracketIndex.removeLast()
-                    result[at: i] = ""
-                    result[at: start] = ""
-                    if i - start > 1{
-                        let from = result.index(begin, offsetBy: start)
-                        let to = result.index(begin, offsetBy: i - 2)
-                        let tmp = String(result[from...to])
-                        result.replaceSubrange(from...to, with: String(tmp.reversed()))
-                    }
-                    i -= 1
-                }
-                // print(result, bracketIndex)
-                // print("\n\n\n")
-            default:
-                i += 1
-            }
+    func maxArea(_ height: [Int]) -> Int {
+        
+        struct Interest{
+            let h: Int
+            let index: Int
         }
+        
+        
+        var result = 0
+        let cnt = height.count
+        guard cnt > 1 else { return 0 }
+        let first = height[0]
+        
+        
+        // value : index
+        var dataSet: [Interest] = [Interest(h: first, index: 0)]
+        var i = 1
+        
+        while i < cnt{
+            let h = height[i]
+            var j = 0
+            let datCnt = dataSet.count
+            Inner: while j < datCnt{
+                if dataSet[j].h >= h{
+                    break Inner
+                }
+                else{
+                    
+                    j += 1
+                }
+            }
+            result = max(result, 0)
+            i += 1
+        }
+        
+        
+        
+        
         return result
     }
 }
-
-
-
-var testTwo = "(abcd)"
-testTwo = "(u(love)i)"
-testTwo = "(ed(et(oc))el)"
-testTwo = "vdgzyj()"
-
-
-var result = Solution().reverseParentheses(testTwo)
-
-
-// print(result)
