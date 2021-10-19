@@ -36,7 +36,11 @@ auto_release_pool
 
 
 
+就是操作， push
 
+
+
+pop
 <hr>
 
 
