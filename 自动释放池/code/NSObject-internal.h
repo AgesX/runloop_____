@@ -37,15 +37,47 @@
  */
 
 /***********************************************************************
-   Autorelease pool implementation
+   Autorelease pool implementation 的实现
+ 
+ 
+ 
+ // 栈帧
+ 
+ 
+ 
+ 
 
    A thread's autorelease pool is a stack of pointers.
    Each pointer is either an object to release, or POOL_BOUNDARY which is
 	 an autorelease pool boundary.
    A pool token is a pointer to the POOL_BOUNDARY for that pool. When
 	 the pool is popped, every object hotter than the sentinel is released.
+ 
+ 
+ 
+ hotter， 焦点，聚焦
+ 
+ 页的结构，虚拟内存
+ 
+ 
+ 
+ 
+ 
    The stack is divided into a doubly-linked list of pages. Pages are added
 	 and deleted as necessary.
+ 
+ 
+ 
+ 
+
+
+ doubly-linked， 双向链表 （ 前驱，后继  ）
+ 
+ 
+ 
+ 
+ 
+ 
    Thread-local storage points to the hot page, where newly autoreleased
 	 objects are stored.
 **********************************************************************/
