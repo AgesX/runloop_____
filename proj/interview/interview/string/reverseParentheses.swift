@@ -12,6 +12,7 @@ class reverseParentheses{
 
 // 1190. Reverse Substrings Between Each Pair of Parentheses
 
+class ReverseParentheses{
 class Solution {
     func reverseParentheses(_ s: String) -> String {
         let cnt = s.count
@@ -65,4 +66,9 @@ func testTT(){
 
 
 
+}
+    
+    
+    
+    
 }

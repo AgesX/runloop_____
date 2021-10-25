@@ -8,37 +8,34 @@
 import Foundation
 
 
+// 确定首尾， 二分法
 
-class BSTIterator {
-
-    
-    let arr: [Int]
-    var forward = 0
-    let count: Int
-    
-    init(_ root: TreeNode?) {
-        var array = [Int]()
-        func dfs(_ node: TreeNode?){
-            guard let n = node else { return }
-            dfs(n.left)
-            array.append(n.val)
-            dfs(n.right)
+class Solution {
+    func countNodes(_ root: TreeNode?) -> Int {
+        var rightH = 0
+        var leftH = 0
+        var cur = root
+        while cur != nil{
+            cur = cur?.right
+            rightH += 1
         }
-        dfs(root)
-        //
-        arr = array
-        count = array.count
+        cur = root
+        while cur != nil{
+            cur = cur?.left
+            leftH += 1
+        }
+        if leftH == rightH{
+            let val = pow(Double(2), Double(rightH))
+            return Int(val) - 1
+        }
+        else{
+            
+            
+        }
+        return 0
     }
     
     
     
-    func next() -> Int{
-        let val = arr[forward]
-        forward += 1
-        return val
-    }
     
-    func hasNext() -> Bool {
-        return forward < count
-    }
 }

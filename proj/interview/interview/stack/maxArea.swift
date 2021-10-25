@@ -12,7 +12,7 @@ import Foundation
 
 // 11. Container With Most Water
 
-
+class maxArea{
 // 双指针，大法好
 
 class Solution {
@@ -73,3 +73,5 @@ class Solution {
 
 
 
+
+}
