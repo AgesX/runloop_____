@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		26507E2C27264FC100CA569F /* maxArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26507E2B27264FC100CA569F /* maxArea.swift */; };
+		26507E2E2726540B00CA569F /* MinStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26507E2D2726540B00CA569F /* MinStack.swift */; };
 		26B3F94E2718357600113A58 /* reverseParentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B3F94D2718357600113A58 /* reverseParentheses.swift */; };
 		26DEC88C2713CA3C00F6F3C6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEC88B2713CA3C00F6F3C6 /* main.swift */; };
 		26DEC8942713E55500F6F3C6 /* one.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEC8932713E55500F6F3C6 /* one.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		26507E2B27264FC100CA569F /* maxArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maxArea.swift; sourceTree = "<group>"; };
+		26507E2D2726540B00CA569F /* MinStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinStack.swift; sourceTree = "<group>"; };
 		26B3F94D2718357600113A58 /* reverseParentheses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reverseParentheses.swift; sourceTree = "<group>"; };
 		26DEC8882713CA3C00F6F3C6 /* interview */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = interview; sourceTree = BUILT_PRODUCTS_DIR; };
 		26DEC88B2713CA3C00F6F3C6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				26507E2B27264FC100CA569F /* maxArea.swift */,
+				26507E2D2726540B00CA569F /* MinStack.swift */,
 			);
 			path = stack;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				26DEC89D27140E9A00F6F3C6 /* diameterOfBinaryTree_xxx.swift in Sources */,
 				26DEC8942713E55500F6F3C6 /* one.swift in Sources */,
 				26DEC8A02714258D00F6F3C6 /* ZigZag.swift in Sources */,
+				26507E2E2726540B00CA569F /* MinStack.swift in Sources */,
 				26DEC89A27140E1600F6F3C6 /* diameterOfBinaryTree.swift in Sources */,
 				26DEC8A2271433E700F6F3C6 /* string.swift in Sources */,
 				26507E2C27264FC100CA569F /* maxArea.swift in Sources */,
