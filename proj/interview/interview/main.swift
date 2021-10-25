@@ -11,25 +11,41 @@ import Foundation
 
 
 class MinStack{
+    
+    
+    var arr: [Int]
+    var register: [Int]
 
-    init() {
-        
+    init(){
+        arr = []
+        register = []
     }
     
-    func push(_ val: Int) {
-        
+    func push(_ val: Int){
+        arr.append(val)
+        if let final = register.last{
+            if val <= final{
+                register.append(val)
+            }
+        }
+        else{
+            register.append(val)
+        }
     }
     
-    func pop() {
-        
+    func pop(){
+        let val = arr.removeLast()
+        if let final = register.last, final == val{
+            register.removeLast()
+        }
     }
     
-    func top() -> Int {
-        
+    func top() -> Int{
+        return arr.last ?? -1
     }
     
-    func getMin() -> Int {
-        
+    func getMin() -> Int{
+        return register.last ?? -1
     }
 }
 
@@ -41,3 +57,20 @@ class MinStack{
  * let ret_3: Int = obj.top()
  * let ret_4: Int = obj.getMin()
  */
+
+
+var val: Int = -1{
+    didSet{
+        print(val)
+    }
+}
+
+let minStack = MinStack()
+minStack.push(-2)
+minStack.push(0)
+minStack.push(-3)
+val = minStack.getMin() // return -3
+
+minStack.pop()
+val = minStack.top()    // return 0
+val = minStack.getMin() // return -2
