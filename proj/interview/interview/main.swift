@@ -8,43 +8,45 @@
 import Foundation
 
 
+class LengthOfLastWord{
 
-
-
+// 58. Length of Last Word
 
 class Solution {
     func lengthOfLastWord(_ s: String) -> Int {
         let cnt = s.count
         guard cnt > 0 else { return 0 }
-        var current = cnt
-        var spacing = 0
+        var current = cnt - 1
+        var willEnd = false
         let start = s.startIndex
+        var register = 0
         while current >= 0{
             if s[s.index(start, offsetBy: current)] == " "{
-                switch spacing{
-                case 0:
-                    spacing = 1
-                case 1: ()
-                case 2: spacing = 3
-                default: ()
+                if willEnd{
+                    return register
                 }
             }
             else{
-                switch spacing{
-                case 0:
-                    spacing = 1
-                case 1: ()
-                case 2: spacing = 3
-                default: ()
-                }
+                willEnd = true
+                register += 1
             }
             current -= 1
         }
-        
-        
-        return 0
+        return register
     }
 }
 
 
 
+    func test(){
+        let result = Solution().lengthOfLastWord("Hello World")
+
+
+
+        print(result)
+
+    }
+
+
+
+}
