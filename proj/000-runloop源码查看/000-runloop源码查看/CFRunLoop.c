@@ -2936,7 +2936,7 @@ SInt32 CFRunLoopRunSpecific(CFRunLoopRef rl, CFStringRef modeName, CFTimeInterva
 
 
 // 死循环，找到了
-
+// 入口函数，  CFRunLoopRun ，   CFRunLoopRunSpecific
 void CFRunLoopRun(void) {    /* DOES CALLOUT */
     int32_t result;
     do {
