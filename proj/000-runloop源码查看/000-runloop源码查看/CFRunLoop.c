@@ -2597,6 +2597,7 @@ static int32_t __CFRunLoopRun(CFRunLoopRef rl, CFRunLoopModeRef rlm, CFTimeInter
     }
     
 #if USE_DISPATCH_SOURCE_FOR_TIMERS
+    // gcd 中，根队列的 port
     mach_port_name_t modeQueuePort = MACH_PORT_NULL;
     if (rlm->_queue) {
         modeQueuePort = _dispatch_runloop_root_queue_get_port_4CF(rlm->_queue);
