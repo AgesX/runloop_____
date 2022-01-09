@@ -527,6 +527,9 @@ struct __CFRunLoopMode {
     CFStringRef _name;
     Boolean _stopped;
     char _padding[3];
+    
+    
+    // 模式里面，放事件源
     CFMutableSetRef _sources0;
     CFMutableSetRef _sources1;
     CFMutableArrayRef _observers;
@@ -2889,6 +2892,8 @@ SInt32 CFRunLoopRunSpecific(CFRunLoopRef rl, CFStringRef modeName, CFTimeInterva
     CHECK_FOR_FORK();
     if (__CFRunLoopIsDeallocating(rl)) return kCFRunLoopRunFinished;
     __CFRunLoopLock(rl);
+    
+    // 拿到 runloop 对象的 mode
     CFRunLoopModeRef currentMode = __CFRunLoopFindMode(rl, modeName, false);
     if (NULL == currentMode || __CFRunLoopModeIsEmpty(rl, currentMode, rl->_currentMode)) {
         Boolean did = false;
