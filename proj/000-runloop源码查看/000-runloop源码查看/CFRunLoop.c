@@ -2586,10 +2586,15 @@ static int32_t __CFRunLoopRun(CFRunLoopRef rl, CFRunLoopModeRef rlm, CFTimeInter
         rlm->_stopped = false;
         return kCFRunLoopRunStopped;
     }
-    
+    // 主线程的，端口
+    // 便于，和主线程，通信
     mach_port_name_t dispatchPort = MACH_PORT_NULL;
     Boolean libdispatchQSafe = pthread_main_np() && ((HANDLE_DISPATCH_ON_BASE_INVOCATION_ONLY && NULL == previousMode) || (!HANDLE_DISPATCH_ON_BASE_INVOCATION_ONLY && 0 == _CFGetTSD(__CFTSDKeyIsInGCDMainQ)));
-    if (libdispatchQSafe && (CFRunLoopGetMain() == rl) && CFSetContainsValue(rl->_commonModes, rlm->_name)) dispatchPort = _dispatch_get_main_queue_port_4CF();
+    if (libdispatchQSafe && (CFRunLoopGetMain() == rl) && CFSetContainsValue(rl->_commonModes, rlm->_name)){
+        // 获取了，一个端口
+        // 用来读取事件的
+        dispatchPort = _dispatch_get_main_queue_port_4CF();
+    }
     
 #if USE_DISPATCH_SOURCE_FOR_TIMERS
     mach_port_name_t modeQueuePort = MACH_PORT_NULL;
