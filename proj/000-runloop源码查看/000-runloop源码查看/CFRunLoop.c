@@ -2572,10 +2572,14 @@ static void __CFRunLoopTimeout(void *arg) {
 }
 
 /* rl, rlm are locked on entrance and exit */
+
+// run loop run 的核心逻辑， 正文
 static int32_t __CFRunLoopRun(CFRunLoopRef rl, CFRunLoopModeRef rlm, CFTimeInterval seconds, Boolean stopAfterHandle, CFRunLoopModeRef previousMode) {
     uint64_t startTSR = mach_absolute_time();
     
     if (__CFRunLoopIsStopped(rl)) {
+        
+        // 先判断，停止
         __CFRunLoopUnsetStopped(rl);
         return kCFRunLoopRunStopped;
     } else if (rlm->_stopped) {
@@ -2906,9 +2910,14 @@ SInt32 CFRunLoopRunSpecific(CFRunLoopRef rl, CFStringRef modeName, CFTimeInterva
     rl->_currentMode = currentMode;
     int32_t result = kCFRunLoopRunFinished;
     
-    if (currentMode->_observerMask & kCFRunLoopEntry ) __CFRunLoopDoObservers(rl, currentMode, kCFRunLoopEntry);
+    if (currentMode->_observerMask & kCFRunLoopEntry ){
+        // 通知 Observer， 进入 run loop
+        __CFRunLoopDoObservers(rl, currentMode, kCFRunLoopEntry);
+    }
     result = __CFRunLoopRun(rl, currentMode, seconds, returnAfterSourceHandled, previousMode);
-    if (currentMode->_observerMask & kCFRunLoopExit ) __CFRunLoopDoObservers(rl, currentMode, kCFRunLoopExit);
+    if (currentMode->_observerMask & kCFRunLoopExit ){
+        __CFRunLoopDoObservers(rl, currentMode, kCFRunLoopExit);
+    }
     
     __CFRunLoopModeUnlock(currentMode);
     __CFRunLoopPopPerRunData(rl, previousPerRun);
